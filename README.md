@@ -82,7 +82,7 @@ The argument parameters are explained below. You can specify your own values whi
 2. For testing the policy:
    ```bash
    cd HetroRL/
-   python3 run/run_policy.py --policy_args "start=(1, 2, 90) | target=[(2,3), (4,2), (1,2)]"
+   python3 run/run_policy.py --policy_args "start=(1, 2, 90) | targets=[(2,3), (4,2), (1,2)]"
 
 The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
 
