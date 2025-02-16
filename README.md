@@ -32,7 +32,7 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
 The Q-learning update rule is given by the following equation:
 
 $$
-Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha \left( R_{t+1} + \gamma \max_{a'} Q(S_{t+1}, a') - Q(S_t, A_t) \right)
+Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha \left[ R_{t+1} + \gamma \max_{a'} Q(S_{t+1}, a') - Q(S_t, A_t) \right]
 $$
 
 Where:
