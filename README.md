@@ -36,11 +36,11 @@ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_{a'} Q(
 $$
 
 Where:
-- $$\ Q(s_t, a_t) \$$ is the action-value function for the state $$\( s_t \)$$ and action $$\( a_t \)$$,
-- $$\( \alpha \)$$ is the learning rate (controls how much new information overrides the old),
-- $$\( r_{t+1} \)$$ is the reward received after performing action $$\( a_t \)$$ in state $$\( s_t \)$$,
-- $$\( \gamma \)$$ is the discount factor (how much future rewards are valued over immediate rewards),
-- $$\( \max_{a'} Q(s_{t+1}, a') \)$$ is the maximum predicted reward for the next state $$\( s_{t+1} \)$$ over all possible actions $$\( a' \)$$.
+- $$\ Q(s_t, a_t) \$$ is the action-value function for the state $$\ s_t \$$ and action $$\ a_t \$$,
+- $$\ \alpha \$$ is the learning rate (controls how much new information overrides the old),
+- $$\ r_{t+1} \$$ is the reward received after performing action $$\( a_t \)$$ in state $$\ s_t \$$,
+- $$\ \gamma \$$ is the discount factor (how much future rewards are valued over immediate rewards),
+- $$\ \max_{a'} Q(s_{t+1}, a') \$$ is the maximum predicted reward for the next state $$\ s_{t+1} \$$ over all possible actions $$\ a' \$$.
 
 This equation is used to iteratively update the Q-values (action-value function) as the agent interacts with the environment.
 
