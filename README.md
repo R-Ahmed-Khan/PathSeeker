@@ -30,9 +30,9 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
 
 The Q-learning update rule is given by the following equation:
 
-\[
+$$
 Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_{a'} Q(s_{t+1}, a') - Q(s_t, a_t) \right)
-\]
+$$
 
 Where:
 - \( Q(s_t, a_t) \) is the action-value function for the state \( s_t \) and action \( a_t \),
@@ -42,6 +42,7 @@ Where:
 - \( \max_{a'} Q(s_{t+1}, a') \) is the maximum predicted reward for the next state \( s_{t+1} \) over all possible actions \( a' \).
 
 This equation is used to iteratively update the Q-values (action-value function) as the agent interacts with the environment.
+
 
 
 
