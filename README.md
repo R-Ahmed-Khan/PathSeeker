@@ -65,7 +65,15 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 <div align="center">
   
-![reward_history](https://github.com/user-attachments/assets/369259b3-ae20-4937-8454-8a3ca4e78112)
+![reward_history](https://github.com/user-attachments/assets/770761b9-a1eb-4b79-8036-7a2a8b878ae4)
+
+</div>
+
+### Temporal Difference Error
+
+<div align="center">
+  
+![td_error](https://github.com/user-attachments/assets/deb8a4d9-f330-40a2-8f25-70390cf6a97f)
 
 </div>
 
