@@ -63,7 +63,7 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 <div align="center">
   
-![tabular_rl_2](https://github.com/user-attachments/assets/db923a0e-7438-4f25-9bbd-e50ed1172bbf)
+  ![tabular_rl_2](https://github.com/user-attachments/assets/71a53c6e-e6f6-41bc-928c-5c263d13146c)
 
 </div>
 
