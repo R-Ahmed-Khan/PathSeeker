@@ -70,23 +70,18 @@ It can be seen from the results that reward converges, hence the UGV tracks the 
 
 ### Reward History and Temporal Difference Error
 
-<table style="margin: 0 auto; height: 400px;">
-  <tr style="height: 100%;">
-    <td style="text-align: center; padding-right: 10px; vertical-align: middle;">
-      <img src="https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01" alt="reward_history" width="300"/>
-      <p>Reward History</p>
+<table>
+  <tr>
+    <td style="text-align: center; padding-right: 10px;">
+      <img src="https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01" alt="reward_history" width="500"/>
+      <p>Reward History vs Episodes</p>
     </td>
-    <td style="text-align: center; vertical-align: middle;">
-      <img src="https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d" alt="td_error" width="300"/>
-      <p>Temporal Difference Error</p>
+    <td style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d" alt="td_error" width="500"/>
+      <p>Temporal Difference Error vs Episodes</p>
     </td>
   </tr>
 </table>
-
-
-
-
-
 
 ### UGV Path
 
