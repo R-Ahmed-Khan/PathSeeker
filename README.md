@@ -61,6 +61,13 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 ## Experimental Results
 
+The policy was tested on following parameters:
+
+- Start Position (x,y,theta) = (0, 4, 0)
+- Target Positions (x,y) = [(0, 1), (3, 1), (1,1),(2, 1), (1, 0), (3, 0)]
+
+It can be seen from the results that reward converges, hence the UGV tracks the moving target point while avoiding the obstacle.
+
 ### Reward History
 
 <div align="center">
