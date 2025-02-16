@@ -58,16 +58,41 @@ This equation is used to iteratively update the Q-values (action-value function)
    cd HetroRL/
    pip install -r requirements.txt
 
-### Training and Policy Testing
+### Training and Testing Policy
+
+If you are first time installing this repository, you can test the policy with already trained model with the default commands provided below for testing the policy.
 
 1. For training the policy:
    ```bash
+   cd HetroRL/
    python3 run/run_q_learn.py --env_args "grid_size=5 | obstacles=[(1,3), (2,4), (2,0)]" --learn_args "epsilon=0.3 | gamma=0.95 | alpha=0.05 | episodes=400000"
+
+The argument parameters are explained below. You can specify your own values while training (keeping the same format as specified).
+
+- `--env_args`: Specifies the environment configuration for the agent.
+- **`grid_size=5`**: Defines the size of the grid. Here, it's a 5x5 grid, meaning there are 5 rows and 5 columns where the agent will move.
+- **`obstacles=[(1,3), (2,4), (2,0)]`**: Specifies the locations of obstacles within the grid. 
+
+- `--learn_args`: Specifies the learning parameters for the Q-learning algorithm.
+- **`epsilon=0.3`**: The exploration rate for the epsilon-greedy policy.
+- **`gamma=0.95`**: The discount factor.
+- **`alpha=0.05`**: The learning rate. 
+- **`episodes=400000`**: The number of training episodes.
 
 2. For testing the policy:
    ```bash
+   cd HetroRL/
    python3 run/run_policy.py --policy_args "start=(1, 2, 90) | target=[(2,3), (4,2), (1,2)]"
-  
+
+The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
+
+- `--policy_args`: Specifies the testing parameters.
+- **`start=(1, 2, 90)`**: The starting position of the agent in the environment, given by the tuple `(x, y, theta)`:
+  - **`x=1`**: The starting x-coordinate on the grid.
+  - **`y=2`**: The starting y-coordinate on the grid.
+  - **`theta=90`**: The initial orientation of the agent, in degrees.
+- **`target=[(2,3), (4,2), (1,2)]`**: A list of target locations that the agent should reach in sequence. Each target is represented by its `(x, y)` coordinates.
+  - In this example, the agent needs to visit the points `(2,3)`, `(4,2)`, and `(1,2)` in order. After reaching one target, the agent will try to move to the next target until all are visited.
 
 ## Hyperparameters
 
