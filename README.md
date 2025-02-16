@@ -61,5 +61,9 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 ## Experimental Results
 
-![tabular_rl_2](https://github.com/user-attachments/assets/6aa3b3a6-f7f7-4917-8336-5ebf4af0f791)
+<div align="center">
+  
+![tabular_rl_2](https://github.com/user-attachments/assets/db923a0e-7438-4f25-9bbd-e50ed1172bbf)
+
+</div>
 
