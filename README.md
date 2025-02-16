@@ -58,3 +58,8 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
    ```bash
    git clone https://github.com/R-Ahmed-Khan/HetroRL.git
    cd HetroRL/
+
+## Experimental Results
+
+![tabular_rl_2](https://github.com/user-attachments/assets/6aa3b3a6-f7f7-4917-8336-5ebf4af0f791)
+
