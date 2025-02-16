@@ -148,3 +148,6 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
 
 </div>
 
+## Directory Structure
+
+HetroRL/ ├── analysis/ │ └── plot_learning_data.py ├── artifacts/ │ ├── grid_size.csv │ ├── obstacles.csv │ ├── q_table.csv │ ├── reward_history.csv │ └── temp_diff_error.csv ├── run/ │ ├── run_test_policy.py │ └── run_q_learn.py ├── src/ │ ├── environment.py │ ├── policy.py │ ├── q_learning.py │ └── utils.py └── README.md
