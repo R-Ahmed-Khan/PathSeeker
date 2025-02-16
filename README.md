@@ -44,9 +44,6 @@ Where:
 
 This equation is used to iteratively update the Q-values (action-value function) as the agent interacts with the environment.
 
-
-
-
 ## Installation
 
 ### Requirements:
@@ -58,6 +55,25 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
    ```bash
    git clone https://github.com/R-Ahmed-Khan/HetroRL.git
    cd HetroRL/
+
+## Hyperparameters
+
+### Environment Parameters
+
+The environment for the learning comprises of:
+
+- Random Start and Target Positions
+- Fixed Obstacles: [(3, 3), (2, 4), (2, 1)]
+- Grid size: 5x5
+
+### Learning Parameters
+
+We have used the following learning parameters:
+
+- Exploration rate: 0.3
+- Learning rate: 0.05
+- Discount Factor: 0.95
+- Episodes: 400000
 
 ## Experimental Results
 
