@@ -32,15 +32,15 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
 The Q-learning update rule is given by the following equation:
 
 $$
-Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_{a'} Q(s_{t+1}, a') - Q(s_t, a_t) \right)
+Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha \left( R_{t+1} + \gamma \max_{a'} Q(S_{t+1}, a') - Q(S_t, A_t) \right)
 $$
 
 Where:
-- $$\ Q(s_t, a_t) \$$ is the action-value function for the state $$\ s_t \$$ and action $$\ a_t \$$,
+- $$\ Q(S_t, A_t) \$$ is the action-value function for the state $$\ S_t \$$ and action $$\ A_t \$$,
 - $$\ \alpha \$$ is the learning rate (controls how much new information overrides the old),
-- $$\ r_{t+1} \$$ is the reward received after performing action $$\( a_t \)$$ in state $$\ s_t \$$,
+- $$\ R_{t+1} \$$ is the reward received after performing action $$\( A_t \)$$ in state $$\ S_t \$$,
 - $$\ \gamma \$$ is the discount factor (how much future rewards are valued over immediate rewards),
-- $$\ \max_{a'} Q(s_{t+1}, a') \$$ is the maximum predicted reward for the next state $$\ s_{t+1} \$$ over all possible actions $$\ a' \$$.
+- $$\ \max_{a'} Q(S_{t+1}, a') \$$ is the maximum predicted reward for the next state $$\ S_{t+1} \$$ over all possible actions $$\ a' \$$.
 
 This equation is used to iteratively update the Q-values (action-value function) as the agent interacts with the environment.
 
