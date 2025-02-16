@@ -68,21 +68,22 @@ The policy was tested on following parameters:
 
 It can be seen from the results that reward converges, hence the UGV tracks the moving target point while avoiding the obstacle.
 
-### Reward History
+### Reward History and Temporal Difference Error
 
-<div align="center">
-  
-![reward_history](https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01)
+<div style="display: flex; justify-content: space-around;">
+
+  <div style="text-align: center; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01" alt="reward_history" width="300"/>
+    <p>Reward History</p>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d" alt="td_error" width="300"/>
+    <p>Temporal Difference Error</p>
+  </div>
 
 </div>
 
-### Temporal Difference Error
-
-<div align="center">
-  
-![td_error](https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d)
-
-</div>
 
 ### UGV Path
 
