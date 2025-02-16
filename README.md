@@ -1,7 +1,7 @@
 
 # Tabular RL-Based 2D Path Planning for UGV
 
-This repository contains the implementation of a Tabular Reinforcement Learning (RL) approach for solving the problem of 2D path planning of an Unmanned Ground Vehicle (UGV) that tracks a moving target while avoiding fixed obstacles. The problem is addressed in a grid-based environment, where the UGV navigates to the target while also tracking into account its heading and learning to avoid obstacles based on Q-learning algorithm.
+This repository contains the implementation of a Tabular Reinforcement Learning (RL) approach for solving the problem of 2D path planning of an Unmanned Ground Vehicle (UGV) that tracks a moving target while avoiding fixed obstacles. The problem is addressed in a grid-based environment, where the UGV navigates to the target while also taking into account its heading and learning to avoid obstacles based on Q-learning algorithm.
 
 ## Table of Contents
 1. [Problem Overview](#problem-overview)
