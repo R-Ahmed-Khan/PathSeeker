@@ -80,11 +80,12 @@ It can be seen from the results that reward converges, hence the UGV tracks the 
       <img src="https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d" alt="td_error" width="500"/>
       <p style="text-align: center;">Temporal Difference Error vs Episodes</p>
     </td>
-  </tr>
-  
+  </tr> 
 </table>
 
 ### UGV Path
+
+The UGV tracks the moving target while changing its orientation to avoid obstacles.
 
 <div align="center">
   
