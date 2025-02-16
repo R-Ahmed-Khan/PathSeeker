@@ -36,7 +36,7 @@ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_{a'} Q(
 $$
 
 Where:
-- $$\( Q(s_t, a_t) \)$$ is the action-value function for the state $$\( s_t \)$$ and action $$\( a_t \)$$,
+- $$\ Q(s_t, a_t) \$$ is the action-value function for the state $$\( s_t \)$$ and action $$\( a_t \)$$,
 - \( \alpha \) is the learning rate (controls how much new information overrides the old),
 - \( r_{t+1} \) is the reward received after performing action \( a_t \) in state \( s_t \),
 - \( \gamma \) is the discount factor (how much future rewards are valued over immediate rewards),
