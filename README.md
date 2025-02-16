@@ -47,15 +47,27 @@ This equation is used to iteratively update the Q-values (action-value function)
 
 ## Installation
 
-### Requirements:
-To run this project, you'll need Python 3.x and a few dependencies. You can set up the environment using pip or conda.
-
 ### Steps for Setup:
 
 1. Clone the Repository:
    ```bash
    git clone https://github.com/R-Ahmed-Khan/HetroRL.git
+
+2. Requirements:
+   ```bash
    cd HetroRL/
+   pip install -r requirements.txt
+
+### Training and Policy Testing
+
+1. For training the policy:
+   ```bash
+   python3 run/run_q_learn.py --env_args "grid_size=5 | obstacles=[(1,3), (2,4), (2,0)]" --learn_args "epsilon=0.3 | gamma=0.95 | alpha=0.05 | episodes=400000"
+
+2. For testing the policy:
+   ```bash
+   python3 run/run_policy.py --policy_args "start=(1, 2, 90) | target=[(2,3), (4,2), (1,2)]"
+  
 
 ## Hyperparameters
 
