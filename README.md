@@ -61,6 +61,16 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 ## Experimental Results
 
+### Reward History
+
+<div align="center">
+  
+![reward_history](https://github.com/user-attachments/assets/369259b3-ae20-4937-8454-8a3ca4e78112)
+
+</div>
+
+### UGV Path
+
 <div align="center">
   
   ![tabular_rl_2](https://github.com/user-attachments/assets/71a53c6e-e6f6-41bc-928c-5c263d13146c)
