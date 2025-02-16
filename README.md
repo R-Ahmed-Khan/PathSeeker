@@ -65,7 +65,7 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 <div align="center">
   
-![reward_history](https://github.com/user-attachments/assets/770761b9-a1eb-4b79-8036-7a2a8b878ae4)
+![reward_history](https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01)
 
 </div>
 
@@ -73,7 +73,7 @@ To run this project, you'll need Python 3.x and a few dependencies. You can set 
 
 <div align="center">
   
-![td_error](https://github.com/user-attachments/assets/deb8a4d9-f330-40a2-8f25-70390cf6a97f)
+![td_error](https://github.com/user-attachments/assets/eaa02f00-82a7-4a6d-8dc1-35dba1c01d5d)
 
 </div>
 
