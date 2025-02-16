@@ -72,7 +72,7 @@ It can be seen from the results that reward converges, hence the UGV tracks the 
 
 <div style="display: flex; justify-content: space-between;">
 
-  <div style="flex: 1; text-align: center; margin-right: 50px;">
+  <div style="flex: 1; text-align: center;">
     <img src="https://github.com/user-attachments/assets/f7ddcc66-3442-4cf0-8735-70cc48883a01" alt="reward_history" width="300"/>
     <p>Reward History</p>
   </div>
