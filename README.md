@@ -5,8 +5,9 @@ This repository contains the implementation of a Tabular Reinforcement Learning 
 ## Table of Contents
 1. [Problem Overview](#problem-overview)
 2. [State and Action Space](#state-and-action-space)
-3. [Installation](#installation)
-4. [Experimental Results](#experimental-results)
+3. [Q-learning Algorithm](#q-learning-algorithm)
+4. [Installation](#installation)
+5. [Experimental Results](#experimental-results)
 
 ## Problem Overview
 The task is to design a UGV that can move through a 2D environment, tracking a moving target while avoiding fixed obstacles. The environment is represented as a 2D grid, where the UGV learns to plan its path using tabular RL. The UGV's objective is to reach the target position while avoiding collisions with obstacles.
@@ -24,6 +25,23 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
   - Move Backward: Move one grid cell backward.
   - Turn Clockwise: Rotate 90 degrees clockwise.
   - Turn Counterclockwise: Rotate 90 degrees counterclockwise.
+
+## Q-learning Algorithm
+
+The Q-learning update rule is given by the following equation:
+
+\[
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left( r_{t+1} + \gamma \max_{a'} Q(s_{t+1}, a') - Q(s_t, a_t) \right)
+\]
+
+Where:
+- \( Q(s_t, a_t) \) is the action-value function for the state \( s_t \) and action \( a_t \),
+- \( \alpha \) is the learning rate (controls how much new information overrides the old),
+- \( r_{t+1} \) is the reward received after performing action \( a_t \) in state \( s_t \),
+- \( \gamma \) is the discount factor (how much future rewards are valued over immediate rewards),
+- \( \max_{a'} Q(s_{t+1}, a') \) is the maximum predicted reward for the next state \( s_{t+1} \) over all possible actions \( a' \).
+
+This equation is used to iteratively update the Q-values (action-value function) as the agent interacts with the environment.
 
 
 
