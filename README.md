@@ -81,6 +81,7 @@ It can be seen from the results that reward converges, hence the UGV tracks the 
       <p style="text-align: center;">Temporal Difference Error vs Episodes</p>
     </td>
   </tr>
+  
 </table>
 
 ### UGV Path
