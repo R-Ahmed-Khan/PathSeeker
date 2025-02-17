@@ -13,7 +13,7 @@ This repository contains the implementation of a Tabular Reinforcement Learning 
 7. [Experimental Results](#experimental-results)
 8. [Directory Structure](#directory-structure)
 
-## Presentation Link
+## Presentation
 
 You can view the presentation here: [Google Slides Presentation](https://docs.google.com/presentation/d/1s4Lv9jcmNVO9f39mbx6Bxdi-Cp9ZhSgFOyTvQmg88jc/edit#slide=id.p)
 
