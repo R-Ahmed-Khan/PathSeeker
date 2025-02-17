@@ -33,6 +33,7 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
 
 The reward function for the Unmanned Ground Vehicle (UGV) is defined as follows:
 
+$$
 \[
 \text{Reward} =
 \begin{cases} 
@@ -41,6 +42,7 @@ The reward function for the Unmanned Ground Vehicle (UGV) is defined as follows:
 -(\theta_{UGV}^{(S')} - \theta_{target}) - \| P_{UGV}^{(S')} - P_{target} \|, & \text{otherwise}
 \end{cases}
 \]
+$$
 
 Where:
 - \( S' \) is the next state \( S_{(t+1)} \)
