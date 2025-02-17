@@ -76,21 +76,21 @@ class Environment():
         delta_y = next_ugv_position[1] - ugv_position[1]
 
         # Calculate the angle to the target in radians
-        angle_to_target = np.arctan2(delta_y, delta_x) * 180 / np.pi  # Convert to degrees
+        angle_to_next_ugv_position = np.arctan2(delta_y, delta_x) * 180 / np.pi  # Convert to degrees
 
         # Normalize the angle to be one of 0°, 90°, 270°, or 360°
-        if -45 <= angle_to_target < 45:
-            angle_to_target = 0  # East
-        elif 45 <= angle_to_target < 135:
-            angle_to_target = 90  # North
-        elif 135 <= angle_to_target < 225:
-            angle_to_target = 180  # South 
-        elif 225 <= angle_to_target < 315:
-            angle_to_target = 270  # West
+        if -45 <= angle_to_next_ugv_position < 45:
+            angle_to_next_ugv_position = 0  # East
+        elif 45 <= angle_to_next_ugv_position < 135:
+            angle_to_next_ugv_position = 90  # North
+        elif 135 <= angle_to_next_ugv_position < 225:
+            angle_to_next_ugv_position = 180  # South 
+        elif 225 <= angle_to_next_ugv_position < 315:
+            angle_to_next_ugv_position = 270  # West
         else:
-            angle_to_target = 360  # Wrap around for East again
+            angle_to_next_ugv_position = 360  # Wrap around for East again
 
-        orientation_diff = abs(ugv_position[2] - angle_to_target)
+        orientation_diff = abs(ugv_position[2] - angle_to_next_ugv_position)
 
         if next_ugv_position[:2] == target_position:
             return 200
