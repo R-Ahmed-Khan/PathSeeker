@@ -4,15 +4,22 @@
 This repository contains the implementation of a Tabular Reinforcement Learning (RL) approach for solving the problem of 2D path planning of an Unmanned Ground Vehicle (UGV) that tracks a moving target while avoiding fixed obstacles. The problem is addressed in a grid-based environment, where the UGV navigates to the target while also taking into account its heading and learning to avoid obstacles based on Q-learning algorithm.
 
 ## Table of Contents
-1. [Problem Overview](#problem-overview)
-2. [State and Action Space](#state-and-action-space)
-3. [Q-learning Algorithm](#q-learning-algorithm)
-4. [Installation](#installation)
-5. [Hyperparameters](#hyperparameters)
-6. [Experimental Results](#experimental-results)
-7. [Directory Structure](#directory-structure)
+1. [Presentation Link] (#presentation-link)
+2. [Problem Overview](#problem-overview)
+3. [State and Action Space](#state-and-action-space)
+4. [Q-learning Algorithm](#q-learning-algorithm)
+5. [Installation](#installation)
+6. [Hyperparameters](#hyperparameters)
+7. [Experimental Results](#experimental-results)
+8. [Directory Structure](#directory-structure)
+
+## Presentation Link
+
+You can view the presentation here: [Google Slides Presentation](https://docs.google.com/presentation/d/1s4Lv9jcmNVO9f39mbx6Bxdi-Cp9ZhSgFOyTvQmg88jc/edit#slide=id.p)
+
 
 ## Problem Overview
+
 The task is to design a UGV that can move through a 2D environment, tracking a moving target while avoiding fixed obstacles. The environment is represented as a 2D grid, where the UGV learns to plan its path using tabular RL. The UGV's objective is to reach the target position while avoiding collisions with obstacles.
 
 - Objective: Train the UGV to move towards a dynamically changing target while avoiding obstacles placed in the grid.
