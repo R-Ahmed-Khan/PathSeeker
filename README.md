@@ -71,7 +71,7 @@ $$
 
 Where:
 - $$\ Q(S_t, A_t) \$$, is the action-value function for the state $$\ S_t \$$ and action $$\ A_t \$$,
-- $$\ \alpha \$,$ is the learning rate (controls how much new information overrides the old),
+- $$\ \alpha \$$, is the learning rate (controls how much new information overrides the old),
 - $$\ R_{t+1} \$$, is the reward received after performing action $$\ A_t \$$ in state $$\ S_t \$$,
 - $$\ \gamma \$$, is the discount factor (how much future rewards are valued over immediate rewards),
 - $$\ \max_{a'} Q(S_{t+1}, a') \$$, is the maximum predicted reward for the next state $$\ S_{t+1} \$$ over all possible actions $$\ a' \$$.
