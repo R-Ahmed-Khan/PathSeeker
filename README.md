@@ -81,6 +81,13 @@ This equation is used to iteratively update the Q-values (action-value function)
 
 ## Installation
 
+### System Dependencies:
+
+- Before installing Python dependencies, you need to install the following system packages:
+  ```bash
+  sudo apt-get install imagemagick
+  sudo apt-get install python3-dev
+
 ### Steps for Setup:
 
 1. Clone the Repository:
