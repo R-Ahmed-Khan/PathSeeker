@@ -10,6 +10,7 @@ class Animate():
         base_path = os.getcwd()
         artifacts_path = os.path.join(base_path, 'artifacts')
         self.obstacle_file_path = os.path.join(artifacts_path, 'obstacles.csv')
+        self.grid_file_path = os.path.join(artifacts_path, 'grid_size.csv')
 
     def get_obstacles(self):
         data = []
@@ -18,6 +19,11 @@ class Animate():
                 row = [float(value.replace(',', '')) for value in line.split()]
                 data.append(row)
         self.obstacles = [tuple(inner_list) for inner_list in data]
+
+    def get_grid(self):
+        with open(self.grid_file_path, 'r') as file:
+            for line in file:
+                self.grid_size = float(line)
 
     def animate_trajectory(self, path, target_positions, resolution_Hz=3, duration=None, fig_size=5):
         
@@ -44,8 +50,8 @@ class Animate():
 
         fig, ax = plt.subplots()
 
-        ax.set_xlim([-0.2, 5])
-        ax.set_ylim([-0.2, 5])
+        ax.set_xlim([-0.5, self.grid_size])
+        ax.set_ylim([-0.5, self.grid_size])
         ax.set_aspect("equal")
         ax.grid(True)
 
@@ -118,6 +124,7 @@ class Animate():
 def main_animate(path, target_positions):
     animate = Animate()
     animate.get_obstacles()
+    animate.get_grid()
     ani = animate.animate_trajectory(path, target_positions=target_positions, resolution_Hz=1)
     base_path = os.getcwd()
     analysis_folder_path = os.path.join(base_path, 'analysis/simulation.gif')

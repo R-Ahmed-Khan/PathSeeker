@@ -5,10 +5,10 @@ class Utils():
 
     def encode_state(ugv_position, target_position, grid_size):
 
-        ugv_position_index = ugv_position[0] * 5 + ugv_position[1]
+        ugv_position_index = ugv_position[0] * grid_size + ugv_position[1]
         ugv_orientation_index = ugv_position[2] // 90
         ugv_index = ugv_position_index * 4 + ugv_orientation_index
-        target_index = target_position[0] * 5 + target_position[1]
+        target_index = target_position[0] * grid_size + target_position[1]
         combined_index = target_index + (grid_size**2) * ugv_index
         combined_index = int(combined_index)
 
