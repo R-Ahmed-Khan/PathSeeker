@@ -82,7 +82,7 @@ If you are first time installing this repository, you can test the policy with a
 2. **For testing the policy:**
    ```bash
    cd PathSeeker/
-   python3 run/run_policy.py --policy_args "start=(1, 2, 90) | targets=[(2,3), (4,2), (1,2)]"
+   python3 run/run_policy.py --policy_args "start=(0, 4, 0) | targets=[(0,1),(3,1),(1,1),(2,1),(1,0),(3,0)]"
 
 The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
 
@@ -92,7 +92,7 @@ The argument parameters are explained below. You can specify your own values whi
   - **`y=2`**: The starting y-coordinate on the grid.
   - **`theta=90`**: The initial orientation of the agent, in degrees.
 - **`target=[(2,3), (4,2), (1,2)]`**: A list of target locations that the agent should reach in sequence. Each target is represented by its `(x, y)` coordinates.
-  - In this example, the agent needs to visit the points `(2,3)`, `(4,2)`, and `(1,2)` in order. After reaching one target, the agent will try to move to the next target until all are visited.
+  - In this example, the agent needs to visit the points `(0,1), (3,1), (1,1), (2,1), (1,0), and (3,0)` in order. After reaching one target, the agent will try to move to the next target until all are visited.
 
 ## Hyperparameters
 
@@ -144,7 +144,8 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
 
 <div align="center">
   
-  ![tabular_rl_2](https://github.com/user-attachments/assets/71a53c6e-e6f6-41bc-928c-5c263d13146c)
+  <!-- ![tabular_rl_2](https://github.com/user-attachments/assets/71a53c6e-e6f6-41bc-928c-5c263d13146c) -->
+  ![Simulation](analysis/simulation.gif)
 
 </div>
 
