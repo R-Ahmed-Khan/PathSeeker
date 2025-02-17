@@ -143,7 +143,7 @@ The argument parameters are explained below. You can specify your own values whi
 Currently, the environment for the learning comprises of:
 
 - Random Start and Target Positions
-- Fixed Obstacles: [(3, 3), (2, 4), (2, 0)]
+- Fixed Obstacles: [(1, 3), (2, 4), (2, 0)]
 - Grid size: 5x5
 
 ### Learning Parameters
