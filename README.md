@@ -29,7 +29,7 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
 - State Space: The state of the system is represented by the UGV's position (X, Y) and its orientation (Theta).
   - X, Y: UGV Position on a 2D grid.
   - Theta: UGV Orientation (direction) of the UGV, with possible values: [0, 90, 180, 270, 360] degrees.
-  - $$ \X_t\ $$ , $$ \Y_t\ $$ : Target Position 
+  - $$\ X_t \$$ , $$\ Y_t \$$ : Target Position 
   
 - Action Space: The UGV can take the following actions:
   - Move Forward: Move one grid cell forward.
