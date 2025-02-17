@@ -4,7 +4,7 @@
 This repository contains the implementation of a Tabular Reinforcement Learning (RL) approach for solving the problem of 2D path planning of an Unmanned Ground Vehicle (UGV) that tracks a moving target while avoiding fixed obstacles. The problem is addressed in a grid-based environment, where the UGV navigates to the target while also taking into account its heading and learning to avoid obstacles based on Q-learning algorithm.
 
 ## Table of Contents
-1. [Presentation Link](#presentation-link)
+1. [Presentation](#presentation)
 2. [Problem Overview](#problem-overview)
 3. [State and Action Space](#state-and-action-space)
 4. [Q-learning Algorithm](#q-learning-algorithm)
