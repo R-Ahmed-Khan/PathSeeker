@@ -51,20 +51,18 @@ This equation is used to iteratively update the Q-values (action-value function)
 
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/R-Ahmed-Khan/HetroRL.git
+   git clone https://github.com/R-Ahmed-Khan/PathSeeker.git
 
 2. Requirements:
    ```bash
-   cd HetroRL/
+   cd PathSeeker/
    pip install -r requirements.txt
 
 ### Training and Testing Policy
 
-If you are first time installing this repository, you can test the policy with already trained model with the default commands provided below for testing the policy.
-
-1. For training the policy:
+1. **For training the policy:**
    ```bash
-   cd HetroRL/
+   cd PathSeeker/
    python3 run/run_q_learn.py --env_args "grid_size=5 | obstacles=[(1,3), (2,4), (2,0)]" --learn_args "epsilon=0.3 | gamma=0.95 | alpha=0.05 | episodes=400000"
 
 The argument parameters are explained below. You can specify your own values while training (keeping the same format as specified).
@@ -79,9 +77,11 @@ The argument parameters are explained below. You can specify your own values whi
 - **`alpha=0.05`**: The learning rate. 
 - **`episodes=400000`**: The number of training episodes.
 
-2. For testing the policy:
+If you are first time installing this repository, you can test the policy with already trained model with the default commands provided below for testing the policy.
+
+2. **For testing the policy:**
    ```bash
-   cd HetroRL/
+   cd PathSeeker/
    python3 run/run_policy.py --policy_args "start=(1, 2, 90) | targets=[(2,3), (4,2), (1,2)]"
 
 The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
@@ -150,7 +150,7 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
 
 ## Directory Structure
 
-    HetroRL/ 
+    PathSeeker/ 
 
         ├── analysis/ 
 
