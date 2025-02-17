@@ -29,6 +29,29 @@ The task is to design a UGV that can move through a 2D environment, tracking a m
   - Turn Clockwise: Rotate 90 degrees clockwise.
   - Turn Counterclockwise: Rotate 90 degrees counterclockwise.
 
+## Reward Function
+
+The reward function for the Unmanned Ground Vehicle (UGV) is defined as follows:
+
+\[
+\text{Reward} =
+\begin{cases} 
+200, & \text{if } \| P_{UGV}^{(S')} - P_{target} \| = 0 \\
+-1000, & \text{if } P_{UGV}^{(S')} \in \text{obstacles} \\
+-(\theta_{UGV}^{(S')} - \theta_{target}) - \| P_{UGV}^{(S')} - P_{target} \|, & \text{otherwise}
+\end{cases}
+\]
+
+Where:
+- \( S' \) is the next state \( S_{(t+1)} \)
+- \( P_{UGV}^{(S')} = (x_{UGV}', y_{UGV}', \theta_{UGV}') \) is the position and orientation of the UGV at state \( S' \)
+- \( P_{target} = (x_{target}, y_{target}) \) is the target position
+- \( \text{obstacles} \) refers to the obstacles encountered by the UGV on its path
+- \( \theta_{target} \) is the angle from the UGV’s current position to the target position
+- \( \| P_{UGV}^{(S')} - P_{target} \| \) is the Euclidean distance between the UGV position in the next state \( S' \) and the target position
+- \( (\theta_{UGV}^{(S')} - \theta_{target}) \) is the angular difference between the UGV's orientation and the direction towards the target
+
+
 ## Q-learning Algorithm
 
 The Q-learning update rule is given by the following equation:
