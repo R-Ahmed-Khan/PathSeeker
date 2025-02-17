@@ -48,10 +48,10 @@ Where:
 - $$\ S' \$$ is the next state $$\ S_{t+1} \$$
 - $$\ P_{UGV}^{S'} = (x_{UGV}', y_{UGV}', \theta_{UGV}') \$$ is the position and orientation of the UGV at state $$\ S' \$$
 - $$\ P_{target} = (x_{target}, y_{target}) \$$ is the target position
-- $$\ \text{obstacles} \$$ refers to the obstacles encountered by the UGV on its path
+- $$\ \text{obstacles}, \$$ refers to the obstacles encountered by the UGV on its path
 - $$\ \theta_{target} \$$ is the angle from the UGV’s current position to the target position
-- $$\ \| P_{UGV}^{(S')} - P_{target} \| \$$ is the Euclidean distance between the UGV position in the next state $$\( S' \)$$ and the target position
-- $$\ (\theta_{UGV}^{(S')} - \theta_{target}) \$$ is the angular difference between the UGV's orientation and the direction towards the target
+- $$\ \| P_{UGV}^{S'} - P_{target} \| \$$ is the Euclidean distance between the UGV position in the next state $$\ S' \$$ and the target position
+- $$\ (\theta_{UGV}^{S'} - \theta_{target}) \$$ is the angular difference between the UGV's orientation and the direction towards the target
 
 
 ## Q-learning Algorithm
