@@ -10,6 +10,7 @@ This repository contains the implementation of a Tabular Reinforcement Learning 
 4. [Installation](#installation)
 5. [Hyperparameters](#hyperparameters)
 6. [Experimental Results](#experimental-results)
+7. [Directory Structure](#directory-structure)
 
 ## Problem Overview
 The task is to design a UGV that can move through a 2D environment, tracking a moving target while avoiding fixed obstacles. The environment is represented as a 2D grid, where the UGV learns to plan its path using tabular RL. The UGV's objective is to reach the target position while avoiding collisions with obstacles.
