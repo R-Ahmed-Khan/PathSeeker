@@ -154,7 +154,11 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
 
         ├── analysis/ 
 
-           └── plot_learning_data.py 
+           ├── animate.py
+
+           ├── plot_learning_data.py
+
+           └── simulation.gif 
   
         ├── artifacts/ 
 
@@ -164,9 +168,13 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
   
            ├── q_table.csv 
   
-           ├── reward_history.csv 
+           ├── reward_history.csv
+
+           ├── temp_diff_error.csv
+
+           ├── rewards_history.png 
   
-           └── temp_diff_error.csv 
+           └── temporal_difference_error.png 
   
         ├── run/ 
 
@@ -183,5 +191,7 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
            ├── q_learning.py 
   
            └── utils.py 
+
+        ├── requirements.txt 
    
         └── README.md
