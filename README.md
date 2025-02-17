@@ -15,7 +15,7 @@ This repository contains the implementation of a Tabular Reinforcement Learning 
 
 ## Presentation
 
-You can view the presentation here: [Google Slides Presentation](https://docs.google.com/presentation/d/1s4Lv9jcmNVO9f39mbx6Bxdi-Cp9ZhSgFOyTvQmg88jc/edit#slide=id.p)
+You can view the presentation here: [PathSeeker](https://docs.google.com/presentation/d/1s4Lv9jcmNVO9f39mbx6Bxdi-Cp9ZhSgFOyTvQmg88jc/edit#slide=id.p)
 
 
 ## Problem Overview
