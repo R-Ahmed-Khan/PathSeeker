@@ -111,8 +111,7 @@ The argument parameters are explained below. You can specify your own values whi
 - **`episodes=400000`**: The number of training episodes.
 
 2. **For testing the policy:**
-   
-  If you are first time installing this repository, you can test the policy with already trained model with the default commands provided below for testing the policy.
+ If you are first time installing this repository, you can test the policy with already trained model with the default commands provided below for testing the policy.
    ```bash
    cd PathSeeker/
    python3 run/run_policy.py --policy_args "start=(0, 4, 0) | targets=[(0,1),(3,1),(1,1),(2,1),(1,0),(3,0)]"
