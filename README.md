@@ -129,10 +129,10 @@ If you are first time installing this repository, you can test the policy with a
 The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
 
 - `--policy_args`: Specifies the testing parameters.
-- **`start=(1, 2, 90)`**: The starting position of the agent in the environment, given by the tuple `(x, y, theta)`:
-  - **`x=1`**: The starting x-coordinate on the grid.
-  - **`y=2`**: The starting y-coordinate on the grid.
-  - **`theta=90`**: The initial orientation of the agent, in degrees.
+- **`start=(0, 4, 0)`**: The starting position of the agent in the environment, given by the tuple `(x, y, theta)`:
+  - **`x=0`**: The starting x-coordinate on the grid.
+  - **`y=4`**: The starting y-coordinate on the grid.
+  - **`theta=0`**: The initial orientation of the agent, in degrees.
 - **`target=[(2,3), (4,2), (1,2)]`**: A list of target locations that the agent should reach in sequence. Each target is represented by its `(x, y)` coordinates.
   - In this example, the agent needs to visit the points `(0,1), (3,1), (1,1), (2,1), (1,0), and (3,0)` in order. After reaching one target, the agent will try to move to the next target until all are visited.
 
