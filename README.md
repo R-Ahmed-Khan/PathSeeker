@@ -133,7 +133,7 @@ The argument parameters are explained below. You can specify your own values whi
   - **`x=0`**: The starting x-coordinate on the grid.
   - **`y=4`**: The starting y-coordinate on the grid.
   - **`theta=0`**: The initial orientation of the agent, in degrees.
-- **`target=[(2,3), (4,2), (1,2)]`**: A list of target locations that the agent should reach in sequence. Each target is represented by its `(x, y)` coordinates.
+- **`target=[(0,1),(3,1),(1,1),(2,1),(1,0),(3,0)]`**: A list of target locations that the agent should reach in sequence. Each target is represented by its `(x, y)` coordinates.
   - In this example, the agent needs to visit the points `(0,1), (3,1), (1,1), (2,1), (1,0), and (3,0)` in order. After reaching one target, the agent will try to move to the next target until all are visited.
 
 ## Hyperparameters
