@@ -59,7 +59,7 @@ Where:
 - $$\ \text{obstacles}, \$$, refers to the obstacles encountered by the UGV on its path
 - $$\ \theta_{UGV}^{S'} \$$, is the angle from the UGV’s current position to the UGV's next position
 - $$\ \| P_{UGV}^{S'} - P_{target} \| \$$, is the Euclidean distance between the UGV position in the next state $$\ S' \$$ and the next UGV position
-- $$\ (\theta_{UGV}^{S} - \theta_{UGV}^{S'}) \$$, is the angular difference between the UGV's orientation and the direction towards the target
+- $$\ (\theta_{UGV}^{S} - \theta_{UGV}^{S'}) \$$, is the angular difference between the UGV's current orientation and the direction towards the next position
 
 
 ## Q-learning Algorithm
