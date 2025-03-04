@@ -112,9 +112,11 @@ We have used the following learning parameters:
 
 ### CartPole Response without Baseline
 
+https://github.com/user-attachments/assets/98396b37-5689-4e31-9e4c-58aa0d276286
 
 ### CartPole Response with Baseline
 
+https://github.com/user-attachments/assets/482dcc67-4ad0-46fc-be4f-fec6e2830b8d
 
 
 ## Directory Structure
