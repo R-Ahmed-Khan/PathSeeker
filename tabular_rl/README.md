@@ -96,14 +96,14 @@ This equation is used to iteratively update the Q-values (action-value function)
 
 2. Requirements:
    ```bash
-   cd PathSeeker/
+   cd PathSeeker/tabular_rl/
    pip install -r requirements.txt
 
 ### Training and Testing Policy
 
 1. **For training the policy:**
    ```bash
-   cd PathSeeker/
+   cd PathSeeker/tabular_rl/
    python3 run/run_q_learn.py --env_args "grid_size=5 | obstacles=[(1,3), (2,4), (2,0)]" --learn_args "epsilon=0.3 | gamma=0.95 | alpha=0.05 | episodes=400000"
 
 The argument parameters are explained below. You can specify your own values while training (keeping the same format as specified).
@@ -123,7 +123,7 @@ If you are first time installing this repository, you can test the policy with a
 2. **For testing the policy:**
 
    ```bash
-   cd PathSeeker/
+   cd PathSeeker/tabular_rl/
    python3 run/run_policy.py --policy_args "start=(0, 4, 0) | targets=[(0,1),(3,1),(1,1),(2,1),(1,0),(3,0)]"
 
 The argument parameters are explained below. You can specify your own values while testing (keeping the same format as specified).
@@ -193,7 +193,7 @@ The UGV tracks the moving target while changing its orientation to avoid obstacl
 
 ## Directory Structure
 
-    PathSeeker/ 
+    PathSeeker/tabular_rl/ 
 
         ├── analysis/ 
 

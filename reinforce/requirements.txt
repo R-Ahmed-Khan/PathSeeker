@@ -1,0 +1,17 @@
+matplotlib
+numpy
+pandas
+argparse
+sys
+ast
+shutil
+csv
+ffmpeg
+tensorflow
+tensorboard
+torch
+torchvision
+torchaudio
+tqdm
+gym
+gymnasium
