@@ -47,7 +47,7 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 - Each timestep that the episode continues (i.e., the pole is still considered balanced and the cart has not gone out of bounds), the agent receives a reward of **+1**.
 - There are no additional bonuses or penalties beyond these basic rules. Hence, the total return (sum of rewards) in one episode is equal to the number of timesteps the agent keeps the pole balanced before an end condition is triggered.
 
-The reward function for the Unmanned Ground Vehicle (UGV) is defined as follows:
+The reward function for the cartpole is defined as follows:
 
 The agent receives a reward of **1** if the cart's position and the pole's angle remain within safe bounds; otherwise, the reward is **0** and the episode terminates. Specifically, the reward is **1** if the absolute value of the cart position is less than or equal to 2.4 and the absolute value of the pole's angle is less than or equal to 0.2095 radians. This condition ensures that the pole remains balanced and the cart does not stray too far from the center.
 
