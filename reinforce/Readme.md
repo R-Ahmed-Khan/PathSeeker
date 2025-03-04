@@ -59,10 +59,6 @@ $$
 \end{cases}
 $$
 
-
-## Reinforce 
-
-
 ## Installation
 
 ### System Dependencies:
