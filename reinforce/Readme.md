@@ -79,17 +79,16 @@ We have used the following learning parameters:
 ### CartPole response
 
 <table>
-
   <tr>
     <td style="text-align: center; padding-right: 10px;">
-      <video src="without_baseline/render.mp4" controls></video>
+      <video src="without_baseline/render.mp4" controls width="320" height="240"></video>
       <p style="text-align: center;">Response without Baseline</p>
     </td>
     <td style="text-align: center;">
-      <video src="with_baseline/render.mp4" controls></video>
+      <video src="with_baseline/render.mp4" controls width="320" height="240"></video>
       <p style="text-align: center;">Response with Baseline</p>
     </td>
-  </tr> 
+  </tr>
 </table>
 
 
