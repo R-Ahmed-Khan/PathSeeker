@@ -106,12 +106,12 @@ We have used the following learning parameters:
 
 ## Experimental Results
 
-### Cumulative Rewards
+### Episodic Mean Rewards (Every 100 episodes)
 
-#### Cumulative Reward without Baseline
+#### Reward without Baseline
 ![reward_without_baseline](https://github.com/user-attachments/assets/bcef5f47-c2ef-4bed-82ce-66df41193260)
 
-#### Cumulative Reward with Baseline
+#### Reward with Baseline
 
 ![reward_with_baseline](https://github.com/user-attachments/assets/20d59c8a-8566-4642-94af-9817d5777d5b)
 
