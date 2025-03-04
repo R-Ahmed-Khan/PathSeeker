@@ -82,11 +82,11 @@ We have used the following learning parameters:
 
   <tr>
     <td style="text-align: center; padding-right: 10px;">
-      <img src="without_baseline/render.mp4"/>
+      <video src="without_baseline/render.mp4" controls></video>
       <p style="text-align: center;">Response without Baseline</p>
     </td>
     <td style="text-align: center;">
-      <img src="with_baseline/render.mp4"/>
+      <video src="with_baseline/render.mp4" controls></video>
       <p style="text-align: center;">Response with Baseline</p>
     </td>
   </tr> 
