@@ -109,11 +109,12 @@ We have used the following learning parameters:
 ### Episodic Mean Rewards (Every 100 episodes)
 
 #### Reward without Baseline
-![reward_without_baseline](https://github.com/user-attachments/assets/bcef5f47-c2ef-4bed-82ce-66df41193260)
+
+![without_baseline](https://github.com/user-attachments/assets/52779de4-6bde-4edb-8ede-bccf0a493539)
 
 #### Reward with Baseline
 
-![reward_with_baseline](https://github.com/user-attachments/assets/20d59c8a-8566-4642-94af-9817d5777d5b)
+![with_baseline](https://github.com/user-attachments/assets/fc88d685-dfe3-40e4-8bab-fa6c5e3539a9)
 
 ### CartPole Response without Baseline
 
