@@ -42,8 +42,22 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 - **Push Cart to Right:**  
   Force: 10 Newtons
 
-
 ## Reward Function
+
+- Each timestep that the episode continues (i.e., the pole is still considered balanced and the cart has not gone out of bounds), the agent receives a reward of **+1**.
+- There are no additional bonuses or penalties beyond these basic rules. Hence, the total return (sum of rewards) in one episode is equal to the number of timesteps the agent keeps the pole balanced before an end condition is triggered.
+
+The reward function for the Unmanned Ground Vehicle (UGV) is defined as follows:
+
+The agent receives a reward of **1** if the cart's position and the pole's angle remain within safe bounds; otherwise, the reward is **0** and the episode terminates. Specifically, the reward is **1** if the absolute value of the cart position is less than or equal to 2.4 and the absolute value of the pole's angle is less than or equal to 0.2095 radians. This condition ensures that the pole remains balanced and the cart does not stray too far from the center.
+
+$$
+\text{Reward} =
+\begin{cases} 
+1, & \text{if } |x| \leq 2.4 \text{ and } |\theta| \leq 0.2095 \text{ radians} \\
+0, & \text{otherwise (episode terminates)}
+\end{cases}
+$$
 
 
 ## Reinforce 
@@ -89,9 +103,10 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 
 We have used the following learning parameters:
 
+- Adam Optimizer
 - Learning rate: 0.0005
 - Discount Factor: 0.99
-- Episodes: 400000
+- Total Steps: 400000
 
 ## Experimental Results
 
