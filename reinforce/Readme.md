@@ -70,26 +70,24 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 
 We have used the following learning parameters:
 
-- Learning rate: 0.05
+- Learning rate: 0.0005
 - Discount Factor: 0.99
 - Episodes: 400000
 
 ## Experimental Results
 
-### CartPole response
+### CartPole Response without Baseline
 
-<table>
-  <tr>
-    <td style="text-align: center; padding-right: 10px;">
-      <video src="reinforce/without_baseline/render.mp4" controls width="320" height="240"></video>
-      <p style="text-align: center;">Response without Baseline</p>
-    </td>
-    <td style="text-align: center;">
-      <video src="reinforce/with_baseline/render.mp4" controls width="320" height="240"></video>
-      <p style="text-align: center;">Response with Baseline</p>
-    </td>
-  </tr>
-</table>
+<video src="without_baseline/render.mp4" controls width="320" height="240">
+Your browser does not support the video tag.
+</video>
+
+### CartPole Response with Baseline
+
+<video src="with_baseline/render.mp4" controls width="320" height="240">
+Your browser does not support the video tag.
+</video>
+
 
 
 ## Directory Structure
