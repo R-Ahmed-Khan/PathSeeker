@@ -110,6 +110,15 @@ We have used the following learning parameters:
 
 ## Experimental Results
 
+### Cumulative Rewards
+
+#### Cumulative Reward without Baseline
+![reward_without_baseline](https://github.com/user-attachments/assets/bcef5f47-c2ef-4bed-82ce-66df41193260)
+
+#### Cumulative Reward with Baseline
+
+![reward_with_baseline](https://github.com/user-attachments/assets/20d59c8a-8566-4642-94af-9817d5777d5b)
+
 ### CartPole Response without Baseline
 
 https://github.com/user-attachments/assets/98396b37-5689-4e31-9e4c-58aa0d276286
