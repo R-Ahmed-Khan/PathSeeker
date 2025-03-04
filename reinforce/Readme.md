@@ -24,6 +24,25 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 
 ## State and Action Space
 
+### Observations
+
+- **Cart Position:**  
+  Range: -4.8 < x < 4.8
+- **Cart Velocity:**  
+  Range: -∞ < v < ∞
+- **Pole Angle:**  
+  Range: -24° < θ < 24°
+- **Pole Angular Velocity:**  
+  Range: -∞ < ω < ∞
+
+### Actions
+
+- **Push Cart to Left:**  
+  Force: -10 Newtons
+- **Push Cart to Right:**  
+  Force: 10 Newtons
+
+
 ## Reward Function
 
 
@@ -78,15 +97,8 @@ We have used the following learning parameters:
 
 ### CartPole Response without Baseline
 
-<video src="without_baseline/render.mp4" controls width="320" height="240">
-Your browser does not support the video tag.
-</video>
 
 ### CartPole Response with Baseline
-
-<video src="with_baseline/render.mp4" controls width="320" height="240">
-Your browser does not support the video tag.
-</video>
 
 
 
