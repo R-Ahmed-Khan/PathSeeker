@@ -33,5 +33,21 @@ Each folder includes the necessary scripts, logs, and data specific to the respe
 
 Clone the repo and navigate to the folder corresponding to the approach you wish to run. Each folder has its own setup and instructions (if required).
 
-```bash
+```
 git clone https://github.com/R-Ahmed-Khan/PathSeeker.git
+```
+
+For tabular RL, type in the terminal
+```
+cd PathSeeker/tabular_rl
+```
+
+For Reinforce, type in the terminal
+```
+cd PathSeeker/reinforce
+```
+
+For TRPO, type in the terminal
+```
+cd PathSeeker/trpo
+```
