@@ -13,7 +13,7 @@ The task is framed as a reinforcement learning problem where the agent (UGV) mus
 - **Objective**: Reach the target location from a given start point 
 - **Algorithm**: Proximal Policy Optimization (PPO)
 
-## 🧠 Observation Space
+## 🧩 Observation Space
 
 The observation space of the system is represented by the UGV's position (X, Y), its orientation ($\theta$) and the target position ($$\ X_t \$$ , $$\ Y_t \$$).
   - $X, Y$ : UGV Position on a 2D grid.
@@ -194,7 +194,7 @@ $$
 These checks prevent the agent from running indefinitely or exiting the valid operating area.
 
 
-### 🧠 Implementation Logic
+### 🛠️ Implementation Logic
 
 ```python
 termination = self.distance_target < 0.2
