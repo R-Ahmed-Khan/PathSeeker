@@ -208,19 +208,17 @@ truncation = (
 
 ## Hyperparameters
 
-### Learning Parameters
-
 We have used the following learning parameters:
 
 - Rnning Device: CPU
-- Time steps: 0.3
-- Memory length: 0.05
-- Batch size: 0.95
-- No. of epochs: 400000
-- Learning rate ($\alpha$)
-- Policy clip parameter ($\epsilon$)
-- Discount factor ($\gamma$)
-- GAE lambda ($\lambda$)
+- Time steps: 1500000
+- Memory length: 600
+- Batch size: 200
+- No. of epochs: 10
+- Learning rate ($\alpha$): 0.0001
+- Policy clip parameter ($\epsilon$): 0.2
+- Discount factor ($\gamma$): 0.99
+- GAE lambda ($\lambda$): 0.95
 
 ## 💻 Installation
 
@@ -235,4 +233,38 @@ pip install -r requirements.txt
 ```
 
 ## 📂 Project Structure
+
+PathSeeker/ppo/ 
+
+        ├── analysis/ 
+
+           ├── 
+
+           ├── 
+
+           └──  
+  
+        ├── models/ 
+
+           ├── policy_ppo 
+  
+           └── value_ppo 
+  
+        ├── run/ 
+
+           ├── learn_ppo.py 
+  
+           └── test_ppo.py 
+
+        ├── src/ 
+
+           ├── environment.py 
+  
+           ├── ppo.py 
+  
+           └── utils.py 
+
+        ├── requirements.txt 
+   
+        └── README.md
 
