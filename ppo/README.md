@@ -208,15 +208,11 @@ truncation = (
 )
 ```
 
-### 🧠 Summary
+## 📜 PPO Algorithm
 
-The reward encourages the agent to:
+## 💻 Installation
 
-- Minimize distance to the target.
-- Align its heading with the direction toward the target.
-
-
-## ⚙️ Requirements
+### ⚙️ Requirements
 
 - Python 3.x
 - PyTorch
