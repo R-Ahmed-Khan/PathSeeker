@@ -20,6 +20,20 @@ The observation space of the system is represented by the UGV's position (X, Y),
   - $\theta$ : UGV Orientation (direction) of the UGV, with possible values: [0, 90, 180, 270] degrees.
   - $$\ X_t \$$ , $$\ Y_t \$$ : Target Position
 
+  ```python
+# State space bounds
+self.x_min, self.x_max = -2, 2
+self.y_min, self.y_max = -2, 2
+self.theta_min, self.theta_max = np.deg2rad(-180), np.deg2rad(180)
+
+# Observation space: [x, y, theta, x_target, y_target]
+self.observation_space = spaces.Box(
+            low=np.array([self.x_min, self.y_min, self.theta_min, self.x_min, self.y_min]),
+            high=np.array([self.x_max, self.y_max, self.theta_max, self.x_max, self.y_max]),
+            dtype=np.float32
+        )
+```
+
 ## 🎮 Action Space
 
 The action space consists of two continuous control inputs:
@@ -61,6 +75,10 @@ def scale_action(self, action):
     steer_angle = self.steer_min + (action[0] + 1) * 0.5 * (self.steer_max - self.steer_min)
     v = self.v_min + (action[1] + 1) * 0.5 * (self.v_max - self.v_min)
     return steer_angle, v
+
+def get_next_observation(self, observation, action):    
+    steer_angle, v = self.scale_action(action)
+    ...
 ```
 
 ## 🧮 Scaling Equations
