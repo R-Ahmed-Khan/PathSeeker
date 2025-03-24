@@ -17,7 +17,7 @@ The task is framed as a reinforcement learning problem where the agent (UGV) mus
 
 The observation space of the system is represented by the UGV's position (X, Y), its orientation ($\theta$) and the target position ($$\ X_t \$$ , $$\ Y_t \$$).
   - $X, Y$ : UGV Position on a 2D grid.
-  - $\theta$ : UGV Orientation (direction) of the UGV, with possible values: [0, 90, 180, 270] degrees.
+  - $\theta$ : UGV Orientation (heading)
   - $$\ X_t \$$ , $$\ Y_t \$$ : Target Position
 
   ```python
