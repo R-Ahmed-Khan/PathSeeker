@@ -67,15 +67,15 @@ def scale_action(self, action):
 
 Let the normalized action from the policy be:
 
-- $\ a_0$ in [-1, 1] \ — **Steering angle** ( $\delta \$)
-- $\ a_1$ in [0, 1] \ — **Velocity** $\( v $\)
+- $\ a_0$ in [-1, 1] — **Steering angle** ( $\delta \$)
+- $\ a_1$ in [0, 1] — **Velocity** $\( v $\)
 
 Then the scaled real-world values are computed as:
 
 ### ✅ Steering Angle ( \( \delta \) )
-\[
+$\[
 \delta = \delta_{\text{min}} + \frac{(a_0 + 1)}{2} \cdot (\delta_{\text{max}} - \delta_{\text{min}})
-\]
+$\]
 
 ### ✅ Velocity
 \[
