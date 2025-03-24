@@ -179,7 +179,7 @@ The episode is **truncated (forcefully stopped)** if any of the following occur:
   
   $$
   \
-  \text{step\_count} > \text{episode\_length}
+  \text{step_count} > \text{episode_length}
   \
   $$
 
