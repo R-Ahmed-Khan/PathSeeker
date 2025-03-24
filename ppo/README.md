@@ -151,9 +151,7 @@ $$
 r_\theta = 10 \cdot \cos\theta_{\text{error}}
 $$
 
-> ✅ **Note:** The `wrap` function ensures the angle \theta_{\text{error}} is within $\[-\pi, \pi]$ for proper angular difference handling.
-
----
+> **Note:** The `wrap` function ensures the angle $\theta_{\text{error}}$ is within $\[-\pi, \pi]$ for proper angular difference handling.
 
 ### 🛑 Termination and Truncation Conditions
 
@@ -168,12 +166,10 @@ $$
 $$
 
 Where:
-- \( \mathbf{p} = (x, y) \) is the agent's current position.
-- \( \mathbf{g} = (x_t, y_t) \) is the target position.
+- $\mathbf{p} = (x, y)$ is the agent's current position.
+- $\mathbf{g} = (x_t, y_t)$ is the target position.
 
 This condition ensures that the episode ends when the target is reached.
-
----
 
 ⏹️ Truncation Condition
 
@@ -185,9 +181,12 @@ The episode is **truncated (forcefully stopped)** if any of the following occur:
   $$
 
 - The agent moves **out of the environment bounds**:
+- 
   $$
+  \
   x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}} \\
   y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
+  \
   $$
 
 These checks prevent the agent from running indefinitely or moving outside the valid operational area.
