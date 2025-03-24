@@ -39,43 +39,50 @@ self.action_space = spaces.Box(
 )
 ```
 
-The action space is defined as:
-$$ \[
-\texttt{spaces.Box}\left(\texttt{low} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, 
-\texttt{high} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \texttt{dtype=np.float32} \right)
-\] $$
+## 📐 Control Bounds
 
 These normalized outputs from the policy network are scaled to the actual control limits before being applied in the environment.
 
-\subsubsection*{Control Bounds}
+```python
+self.v_max = 0.6
+self.v_min = 0.0
 
-\begin{align*}
-    \theta_{\text{min}} &= -25^\circ = \texttt{np.deg2rad(-25)} \\
-    \theta_{\text{max}} &= 25^\circ = \texttt{np.deg2rad(25)} \\
-    v_{\text{min}} &= 0.0 \\
-    v_{\text{max}} &= 0.6
-\end{align*}
+self.steer_max = np.deg2rad(25)   # ≈ 0.4363 rad
+self.steer_min = np.deg2rad(-25)  # ≈ -0.4363 rad
+```
 
-\subsubsection*{Action Scaling}
+## 🔄 Action Scaling Function
 
-The actual steering angle $\theta$ and velocity $v$ are computed from the normalized action $\mathbf{a} = [a_{\text{steer}}, a_{\text{vel}}]$ as follows:
+To convert normalized actions to their real-world equivalents, the following function is used:
 
-\begin{align*}
-    \theta &= \theta_{\text{min}} + \frac{a_{\text{steer}} + 1}{2} \cdot (\theta_{\text{max}} - \theta_{\text{min}}) \\
-    v &= v_{\text{min}} + \frac{a_{\text{vel}} + 1}{2} \cdot (v_{\text{max}} - v_{\text{min}})
-\end{align*}
-
-\subsubsection*{Implementation Snippet}
-
-\begin{verbatim}
+```python
 def scale_action(self, action):
+    """Scales action from [-1,1] and [0,1] to real-world bounds."""
     steer_angle = self.steer_min + (action[0] + 1) * 0.5 * (self.steer_max - self.steer_min)
     v = self.v_min + (action[1] + 1) * 0.5 * (self.v_max - self.v_min)
     return steer_angle, v
-\end{verbatim}
+```
+
+## 🧮 Scaling Equations
+
+Let the normalized action from the policy be:
+
+- \( a_0 \in [-1, 1] \) — **Steering angle** \( \delta \)
+- \( a_1 \in [0, 1] \) — **Velocity** \( v \)
+
+Then the scaled real-world values are computed as:
+
+### ✅ Steering Angle ( \( \delta \) )
+\[
+\delta = \delta_{\text{min}} + \frac{(a_0 + 1)}{2} \cdot (\delta_{\text{max}} - \delta_{\text{min}})
+\]
+
+### ✅ Velocity
+\[
+v = v_{\text{min}} + \frac{(a_1 + 1)}{2} \cdot (v_{\text{max}} - v_{\text{min}})
+\]
 
 This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
-
 
 ## 🏁 Reward Function
 
