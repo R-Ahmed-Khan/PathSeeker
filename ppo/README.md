@@ -22,9 +22,22 @@ The observation space of the system is represented by the UGV's position (X, Y),
 
 ## 🎮 Action Space
 
-- **Input to Neural Network**:  
-  - Steering angle ∈ [-1, 1]  
-  - Velocity ∈ [0, 1]
+The action space consists of two continuous control inputs:
+
+- **Steering angle** (in radians)
+- **Velocity** (in meters/second)
+
+The **neural network (policy)** outputs actions in the normalized range:
+- Steering angle ∈ **[-1, 1]**
+- Velocity ∈ **[0, 1]**
+
+```python
+self.action_space = spaces.Box(
+    low=np.array([-1, 0]),
+    high=np.array([1, 1]),
+    dtype=np.float32
+)
+```
 
 The action space is defined as:
 $$ \[
