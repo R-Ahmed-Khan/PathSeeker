@@ -177,18 +177,17 @@ The episode is **truncated (forcefully stopped)** if any of the following occur:
 
 - The agent exceeds the allowed episode length:
 
-`step_count > episode_length`
-
+  `step_count > episode_length`
 
 - The agent moves **out of the environment bounds**:
 
-  $$
-  x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}}
-  $$
+$$
+x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}}
+$$
 
-  $$
-  y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
-  $$
+$$
+y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
+$$
 
 These checks prevent the agent from running indefinitely or exiting the valid operating area.
 
