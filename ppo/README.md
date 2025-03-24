@@ -194,8 +194,6 @@ The episode is **truncated (forcefully stopped)** if any of the following occur:
 
 These checks prevent the agent from running indefinitely or moving outside the valid operational area.
 
----
-
 ### 🧠 Implementation Logic
 
 ```python
@@ -208,7 +206,7 @@ truncation = (
     or current_position[1] < self.y_min
     or current_position[1] > self.y_max
 )
-
+```
 
 ### 🧠 Summary
 
