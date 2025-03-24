@@ -206,7 +206,85 @@ truncation = (
 
 ## 📜 PPO Algorithm
 
-## Hyperparameters
+### 🔧 Initialization
+- Set hyperparameters:
+  - `gamma` ← discount factor
+  - `alpha` ← learning rate
+  - `gae_lambda` ← GAE parameter
+  - `policy_clip` ← PPO clipping threshold
+  - `batch_size` ← number of transitions per mini-batch
+  - `n_epochs` ← number of learning epochs
+
+- Initialize:
+  - Actor network π_θ
+  - Critic network V_ϕ
+  - Optimizers for both networks
+  - Memory buffer `PPOMemory`
+
+---
+
+### 🚀 Interaction with Environment
+
+**For each time step or episode:**
+1. Observe current state `s`
+2. Get action `a`, log probability `log_prob`, and value `v` from policy:
+   - `dist ← π_θ(s)`
+   - `a_raw ~ dist.sample()`
+   - `a ← tanh(a_raw)`  # squash to [-1, 1]
+   - `log_prob ← log_prob(a_raw) - tanh_correction`
+   - `v ← V_ϕ(s)`
+3. Execute action `a` in the environment
+4. Observe reward `r`, next state `s'`, and done flag
+5. Store `(s, a, log_prob, v, r, done)` in memory
+
+---
+
+### 🧮 Learning Phase
+
+**When ready to learn:**
+
+- 🔁 Generate Batches
+- Extract `states, actions, log_probs, values, rewards, dones`
+- Create shuffled mini-batches
+
+- 📈 Compute GAE (Generalized Advantage Estimation)
+```python
+for t in range(T - 1):
+    A[t] = 0
+    discount = 1
+    for k in range(t, T - 1):
+        delta = r_k + γ * V_{k+1} * (1 - done_k) - V_k
+        A[t] += discount * delta
+        discount *= γ * λ
+```
+
+### 🔁 PPO Update Loop
+```python
+for batch in batches:
+    # Get current policy outputs
+    dist_new = π_θ(states)
+    V_new = V_ϕ(states)
+
+    # Compute new log probabilities
+    new_log_probs = dist_new.log_prob(actions)
+    ratio = exp(new_log_probs - old_log_probs)
+
+    # PPO clipped surrogate objective
+    surr1 = ratio * advantage
+    surr2 = clip(ratio, 1 - ε, 1 + ε) * advantage
+    actor_loss = -mean(min(surr1, surr2))
+
+    # Critic loss
+    returns = advantage + values
+    critic_loss = mean((returns - V_new)^2)
+
+    # Total loss and optimization
+    total_loss = actor_loss + 0.5 * critic_loss
+    Backpropagate and update actor & critic
+```
+
+
+## 🎛️ Hyperparameters
 
 We have used the following learning parameters:
 
