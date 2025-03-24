@@ -125,7 +125,7 @@ Where:
 
 🔹 Proximity Reward
 
-Let $\ \mathbf{p} = (x, y) $ be the agent's current position and $\ \mathbf{g} = (x_t, y_t) $ the target position:
+Let $\ \mathbf{p} = (x, y) \$ be the agent's current position and $\ \mathbf{g} = (x_t, y_t) \$ the target position:
 
 $$
 r_p = \frac{1}{\lVert \mathbf{p} - \mathbf{g} \rVert + 0.01}
