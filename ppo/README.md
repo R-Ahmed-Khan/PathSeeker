@@ -28,10 +28,10 @@ self.theta_min, self.theta_max = np.deg2rad(-180), np.deg2rad(180)
 
 # Observation space: [x, y, theta, x_target, y_target]
 self.observation_space = spaces.Box(
-            low=np.array([self.x_min, self.y_min, self.theta_min, self.x_min, self.y_min]),
-            high=np.array([self.x_max, self.y_max, self.theta_max, self.x_max, self.y_max]),
-            dtype=np.float32
-        )
+    low=np.array([self.x_min, self.y_min, self.theta_min, self.x_min, self.y_min]),
+    high=np.array([self.x_max, self.y_max, self.theta_max, self.x_max, self.y_max]),
+    dtype=np.float32
+)
 ```
 
 ## 🎮 Action Space
@@ -65,9 +65,34 @@ self.steer_max = np.deg2rad(25)   # ≈ 0.4363 rad
 self.steer_min = np.deg2rad(-25)  # ≈ -0.4363 rad
 ```
 
-## 🔄 Action Scaling Function
+## 🔄 Action Scaling
+
+### 🧮 Scaling Equations
+
+Let the normalized action from the policy be:
+
+- $\ a_0$ in [-1, 1] — **Steering angle** ( $\delta \$)
+- $\ a_1$ in [0, 1] — **Velocity** $\( v $\)
+
+Then the scaled real-world values are computed as:
+
+- Steering Angle ( $\delta \$)
+$$
+\
+\delta = \delta_{\text{min}} + \frac{(a_0 + 1)}{2} \cdot (\delta_{\text{max}} - \delta_{\text{min}})
+\
+$$
+
+- Velocity
+$$
+\
+v = v_{\text{min}} + \frac{(a_1 + 1)}{2} \cdot (v_{\text{max}} - v_{\text{min}})
+\
+$$
 
 To convert normalized actions to their real-world equivalents, the following function is used:
+
+### ✅ Python Implementation
 
 ```python
 def scale_action(self, action):
@@ -80,29 +105,6 @@ def get_next_observation(self, observation, action):
     steer_angle, v = self.scale_action(action)
     ...
 ```
-
-## 🧮 Scaling Equations
-
-Let the normalized action from the policy be:
-
-- $\ a_0$ in [-1, 1] — **Steering angle** ( $\delta \$)
-- $\ a_1$ in [0, 1] — **Velocity** $\( v $\)
-
-Then the scaled real-world values are computed as:
-
-### ✅ Steering Angle ( $\delta \$)
-$$
-\
-\delta = \delta_{\text{min}} + \frac{(a_0 + 1)}{2} \cdot (\delta_{\text{max}} - \delta_{\text{min}})
-\
-$$
-
-### ✅ Velocity
-$$
-\
-v = v_{\text{min}} + \frac{(a_1 + 1)}{2} \cdot (v_{\text{max}} - v_{\text{min}})
-\
-$$
 
 This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
 
