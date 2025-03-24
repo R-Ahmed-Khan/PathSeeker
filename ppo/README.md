@@ -80,9 +80,11 @@ $$
 $$
 
 ### ✅ Velocity
-$\[
+$$
+\
 v = v_{\text{min}} + \frac{(a_1 + 1)}{2} \cdot (v_{\text{max}} - v_{\text{min}})
-$\]
+\
+$$
 
 This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
 
