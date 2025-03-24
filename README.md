@@ -16,7 +16,7 @@ Three different reinforcement learning algorithms are used to solve this task:
 2. **REINFORCE (Policy Gradient)**  
    A Monte Carlo policy gradient method that directly optimizes the policy.
 
-3. **TRPO (Trust Region Policy Optimization)**  
+3. **PPO (Proximal Policy Optimization)**  
    A more advanced policy optimization method that ensures stable and efficient updates.
 
 ## 📁 Folder Structure
@@ -25,7 +25,7 @@ Each approach has its own directory in the repository:
 
 - `tabular_rl/`: Contains implementation and results for the tabular Q-learning approach.
 - `reinforce/`: Contains implementation and results for the REINFORCE algorithm.
-- `trpo/`: Contains implementation and results for the TRPO approach.
+- `ppo/`: Contains implementation and results for the PPO approach.
 
 Each folder includes the necessary scripts, logs, and data specific to the respective algorithm.
 
@@ -47,7 +47,7 @@ For Reinforce, type in the terminal
 cd PathSeeker/reinforce
 ```
 
-For TRPO, type in the terminal
+For PPO, type in the terminal
 ```
-cd PathSeeker/trpo
+cd PathSeeker/ppo
 ```
