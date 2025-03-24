@@ -155,6 +155,59 @@ $$
 
 ---
 
+### 🛑 Termination and Truncation Conditions
+
+The episode can end in two ways:
+
+✅ Termination Condition
+
+The episode **terminates successfully** when the agent reaches close enough to the target:
+
+$$
+\lVert \mathbf{p} - \mathbf{g} \rVert < 0.2
+$$
+
+Where:
+- \( \mathbf{p} = (x, y) \) is the agent's current position.
+- \( \mathbf{g} = (x_t, y_t) \) is the target position.
+
+This condition ensures that the episode ends when the target is reached.
+
+---
+
+⏹️ Truncation Condition
+
+The episode is **truncated (forcefully stopped)** if any of the following occur:
+
+- The agent exceeds the allowed episode length:
+  $$
+  \text{step\_count} > \text{episode\_length}
+  $$
+
+- The agent moves **out of the environment bounds**:
+  $$
+  x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}} \\
+  y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
+  $$
+
+These checks prevent the agent from running indefinitely or moving outside the valid operational area.
+
+---
+
+### 🧠 Implementation Logic
+
+```python
+termination = self.distance_target < 0.2
+
+truncation = (
+    step_count > self.episode_length 
+    or current_position[0] < self.x_min
+    or current_position[0] > self.x_max
+    or current_position[1] < self.y_min
+    or current_position[1] > self.y_max
+)
+
+
 ### 🧠 Summary
 
 The reward encourages the agent to:
