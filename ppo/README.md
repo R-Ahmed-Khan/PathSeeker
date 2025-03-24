@@ -125,7 +125,7 @@ Where:
 
 🔹 Proximity Reward
 
-Let $\( \mathbf{p} = (x, y) $\) be the agent's current position and $\( \mathbf{g} = (x_t, y_t) $\) the target position:
+Let $\ \mathbf{p} = (x, y) $\ be the agent's current position and $\ \mathbf{g} = (x_t, y_t) $\ the target position:
 
 $$
 d = \lVert \mathbf{p} - \mathbf{g} \rVert
@@ -139,16 +139,16 @@ $$
 
 🔹 Heading Alignment Reward
 
-Let $\( \theta $\) be the agent's current heading, and $\( \theta_{\text{goal}} $\) be the direction to the goal:
+Let $\ \theta $\ be the agent's current heading, and $\ \theta_{\text{goal}} $\ be the direction to the goal:
 
 $$
-\theta_{\text{goal}} = \arctan2(y_g - y, \, x_g - x)
+\theta_{\text{goal}} = \arctan2(y_t - y, \ x_t - x)
 $$
 
 The alignment error is:
 
 $$
-\delta = \text{wrap}(\theta_{\text{goal}} - \theta)
+\theta_{\text{error}} = \text{wrap}(\theta_{\text{goal}} - \theta)
 $$
 
 Then:
@@ -157,7 +157,7 @@ $$
 r_\theta = 10 \cdot \cos(\delta)
 $$
 
-> ✅ **Note:** The `wrap` function ensures the angle #\( \delta $\) is within $\( [-\pi, \pi] $\) for proper angular difference handling.
+> ✅ **Note:** The `wrap` function ensures the angle $\( \delta $\) is within $\( [-\pi, \pi] $\) for proper angular difference handling.
 
 ---
 
