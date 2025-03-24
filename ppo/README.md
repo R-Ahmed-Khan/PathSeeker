@@ -153,7 +153,7 @@ $$
 
 The episode can end in two ways:
 
-✅ Termination Condition
+1️⃣ Termination Condition
 
 The episode **terminates successfully** when the agent reaches close enough to the target:
 
@@ -167,7 +167,7 @@ Where:
 
 This condition ensures that the episode ends when the target is reached.
 
-⏹️ Truncation Condition
+2️⃣ Truncation Condition
 
 The episode is **truncated (forcefully stopped)** if any of the following occur:
 
