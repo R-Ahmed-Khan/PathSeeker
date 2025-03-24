@@ -2,6 +2,10 @@
 
 This project implements an autonomous path palnning system for an Unmanned Ground Vehicle (UGV) using the Proximal Policy Optimization (PPO) reinforcement learning algorithm. The UGV learns to navigate from a start point to a moving target point in a continuous 2D environment.
 
+<div align="center">
+  ![ackermann](https://github.com/user-attachments/assets/d83b73fa-57d1-42be-82d2-23c6331b77dc)
+</div>
+
 ## 🚗 Overview
 
 The task is framed as a reinforcement learning problem where the agent (UGV) must learn an optimal policy to reach the target efficiently and safely. The state and action spaces are continuous, and the agent receives rewards based on its distance to the target.
