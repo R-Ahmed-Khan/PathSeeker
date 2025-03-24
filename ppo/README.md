@@ -46,11 +46,7 @@ The **neural network (policy)** outputs actions in the normalized range:
 - Velocity ∈ **[0, 1]**
 
 ```python
-self.action_space = spaces.Box(
-    low=np.array([-1, 0]),
-    high=np.array([1, 1]),
-    dtype=np.float32
-)
+self.action_space = spaces.Box(low=np.array([-1, 0]), high=np.array([1, 1]), dtype=np.float32)
 ```
 
 ## 📐 Control Bounds
@@ -61,8 +57,8 @@ These normalized outputs from the policy network are scaled to the actual contro
 self.v_max = 0.6
 self.v_min = 0.0
 
-self.steer_max = np.deg2rad(25)   # ≈ 0.4363 rad
-self.steer_min = np.deg2rad(-25)  # ≈ -0.4363 rad
+self.steer_max = np.deg2rad(25) 
+self.steer_min = np.deg2rad(-25) 
 ```
 
 ## 🔄 Action Scaling
@@ -98,7 +94,7 @@ To convert normalized actions to their real-world equivalents, the following fun
 
 ```python
 def scale_action(self, action):
-    """Scales action from [-1,1] and [0,1] to real-world bounds."""
+    """Scales action from [-1, 1] to the actual range."""
     steer_angle = self.steer_min + (action[0] + 1) * 0.5 * (self.steer_max - self.steer_min)
     v = self.v_min + (action[1] + 1) * 0.5 * (self.v_max - self.v_min)
     return steer_angle, v
