@@ -61,28 +61,6 @@ Where:
 - $$\ \| P_{UGV}^{S'} - P_{target} \| \$$, is the Euclidean distance between the UGV position in the next state $$\ S' \$$ and the next UGV position
 - $$\ (\theta_{UGV}^{S} - \theta_{UGV}^{S'}) \$$, is the angular difference between the UGV's current orientation and the direction towards the next position
 
-## ⏹️ Truncation Condition
-
-The episode is **truncated (forcefully stopped)** if any of the following occur:
-
-- The agent exceeds the allowed episode length:
-
-  $$
-  \text{step\_count} > \text{episode\_length}
-  $$
-
-- The agent moves **out of the environment bounds**:
-
-  $$
-  x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}}
-  $$
-
-  $$
-  y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
-  $$
-
-These checks prevent the agent from running indefinitely or exiting the valid operating area.
-
 ## Q-learning Algorithm
 
 The Q-learning update rule is given by the following equation:
