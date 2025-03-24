@@ -151,7 +151,7 @@ $$
 r_\theta = 10 \cdot \cos(\delta)
 $$
 
-> ✅ **Note:** The `wrap` function ensures the angle $\( \delta $\) is within $\( [-\pi, \pi] $\) for proper angular difference handling.
+> ✅ **Note:** The `wrap` function ensures the angle $\( \delta $\) is within $\ [-\pi, \pi] $\ for proper angular difference handling.
 
 ---
 
