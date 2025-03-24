@@ -114,8 +114,8 @@ This ensures that the policy outputs remain bounded while allowing fine control 
 
 The total reward $\( r $\) at each time step is defined as the sum of:
 
-- **Proximity reward** $\( r_p $\) — encourages the agent to get closer to the goal.
-- **Heading alignment reward** $\( r_\theta $\) — encourages the agent to align its heading toward the goal.
+- **Proximity reward** $\( r_p $\) — encourages the agent to get closer to the target.
+- **Heading alignment reward** $\( r_\theta $\) — encourages the agent to align its heading toward the target.
 
 $$
 r = r_p + r_\theta
@@ -133,16 +133,16 @@ $$
 
 🔹 Heading Alignment Reward
 
-Let $\theta$ be the agent's current heading, and $\theta_{\text{goal}}$ be the direction to the goal:
+Let $\theta$ be the agent's current heading, and $\theta_{\text{t}}$ be the direction to the target:
 
 $$
-\theta_{\text{goal}} = \arctan2(y_t - y, \ x_t - x)
+\theta_{\text{t}} = \arctan2(y_t - y, \ x_t - x)
 $$
 
 The alignment error is:
 
 $$
-\theta_{\text{error}} = \text{wrap}(\theta_{\text{goal}} - \theta)
+\theta_{\text{error}} = \text{wrap}(\theta_{\text{t}} - \theta)
 $$
 
 Then:
