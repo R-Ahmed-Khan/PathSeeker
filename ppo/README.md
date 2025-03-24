@@ -204,6 +204,20 @@ truncation = (
 )
 ```
 
+## 🎛️ Hyperparameters
+
+We have used the following learning parameters:
+
+- Rnning Device: CPU
+- Time steps: 1500000
+- Memory length: 600
+- Batch size: 200
+- No. of epochs: 10
+- Learning rate ($\alpha$): 0.0001
+- Policy clip parameter ($\epsilon$): 0.2
+- Discount factor ($\gamma$): 0.99
+- GAE lambda ($\lambda$): 0.95
+
 ## 📜 PPO Algorithm
 
 ### 🔧 Initialization
@@ -243,11 +257,12 @@ truncation = (
 
 **When ready to learn:**
 
-- 🔁 Generate Batches
+🔁 Generate Batches
 - Extract `states, actions, log_probs, values, rewards, dones`
 - Create shuffled mini-batches
 
-- 📈 Compute GAE (Generalized Advantage Estimation)
+📈 Compute GAE (Generalized Advantage Estimation)
+
 ```python
 for t in range(T - 1):
     A[t] = 0
@@ -259,6 +274,7 @@ for t in range(T - 1):
 ```
 
 ### 🔁 PPO Update Loop
+
 ```python
 for batch in batches:
     # Get current policy outputs
@@ -282,21 +298,6 @@ for batch in batches:
     total_loss = actor_loss + 0.5 * critic_loss
     Backpropagate and update actor & critic
 ```
-
-
-## 🎛️ Hyperparameters
-
-We have used the following learning parameters:
-
-- Rnning Device: CPU
-- Time steps: 1500000
-- Memory length: 600
-- Batch size: 200
-- No. of epochs: 10
-- Learning rate ($\alpha$): 0.0001
-- Policy clip parameter ($\epsilon$): 0.2
-- Discount factor ($\gamma$): 0.99
-- GAE lambda ($\lambda$): 0.95
 
 ## 💻 Installation
 
