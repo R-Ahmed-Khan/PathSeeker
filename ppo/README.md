@@ -155,6 +155,24 @@ $$
 
 > **Note:** The `wrap` function ensures the angle $\theta_{\text{error}}$ is within $\[-\pi, \pi]$ for proper angular difference handling.
 
+### 🛠️ Implementation Logic
+```python
+def reward(self, observation, step_count):
+        current_position = observation[:2]
+        theta = observation[2]
+        target_point = observation[3:]
+        
+        self.distance_target = np.linalg.norm(current_position - target_point)
+        r_p =  1 / (self.distance_target + 0.01) 
+        
+        desired_theta = np.arctan2(target_point[1] - current_position[1], target_point[0] - current_position[0])
+        alignment_error = self.wrap_angle(desired_theta - theta)
+        r_theta = 10*np.cos(alignment_error)  
+        
+        reward = r_p + r_theta 
+        return reward
+```
+
 ### 🛑 Termination and Truncation Conditions
 
 The episode can end in two ways:
