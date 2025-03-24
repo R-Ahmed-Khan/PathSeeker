@@ -26,20 +26,11 @@ The observation space of the system is represented by the UGV's position (X, Y),
   - Steering angle ∈ [-1, 1]  
   - Velocity ∈ [0, 1]
 
-\subsection*{Action Space}
-
-The UGV is modeled using an Ackermann steering system and is controlled via a continuous 2D action space. The action vector consists of:
-
-\begin{itemize}
-    \item Steering angle $a_{\text{steer}} \in [-1, 1]$
-    \item Velocity $a_{\text{vel}} \in [0, 1]$
-\end{itemize}
-
 The action space is defined as:
-\[
+$$ \[
 \texttt{spaces.Box}\left(\texttt{low} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, 
 \texttt{high} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \texttt{dtype=np.float32} \right)
-\]
+\] $$
 
 These normalized outputs from the policy network are scaled to the actual control limits before being applied in the environment.
 
