@@ -176,12 +176,15 @@ This condition ensures that the episode ends when the target is reached.
 The episode is **truncated (forcefully stopped)** if any of the following occur:
 
 - The agent exceeds the allowed episode length:
+  
   $$
+  \
   \text{step\_count} > \text{episode\_length}
+  \
   $$
 
 - The agent moves **out of the environment bounds**:
-- 
+  
   $$
   \
   x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}} \\
