@@ -210,19 +210,18 @@ truncation = (
 
 ## 📜 PPO Algorithm
 
+
 ## 💻 Installation
 
-### ⚙️ Requirements
+### ⚙️ Requirement 
 
-- Python 3.x
-- PyTorch
-- NumPy
-- Matplotlib
-- Gym (custom environment)
-- [Optional] PyBullet (if simulation is physics-based)
+This repository was made on python 3.12.4 64-bit.
 
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## 📂 Project Structure
 
