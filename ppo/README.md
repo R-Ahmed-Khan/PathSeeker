@@ -110,14 +110,66 @@ def get_next_observation(self, observation, action):
 
 This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
 
-## 🏁 Reward Function
+## 🎯 Reward Function
 
-The reward function is designed to encourage the UGV to:
+The total reward $\( r $\) at each time step is defined as the sum of:
 
-- Move closer to the target
-- Avoid collisions
-- Minimize time taken to reach the target
-- Penalize erratic or unsafe maneuvers
+- **Proximity reward** $\( r_p $\) — encourages the agent to get closer to the goal.
+- **Heading alignment reward** $\( r_\theta $\) — encourages the agent to align its heading toward the goal.
+
+### 📌 Final Reward Expression
+
+$$
+r = r_p + r_\theta
+$$
+
+Where:
+
+### 🔹 Proximity Reward
+
+Let \( \mathbf{p} = (x, y) \) be the agent's current position and \( \mathbf{g} = (x_g, y_g) \) the target position:
+
+$$
+d = \lVert \mathbf{p} - \mathbf{g} \rVert
+$$
+
+Then:
+
+$$
+r_p = \frac{1}{d + 0.01}
+$$
+
+### 🔹 Heading Alignment Reward
+
+Let \( \theta \) be the agent's current heading, and \( \theta_{\text{goal}} \) be the direction to the goal:
+
+$$
+\theta_{\text{goal}} = \arctan2(y_g - y, \, x_g - x)
+$$
+
+The alignment error is:
+
+$$
+\delta = \text{wrap}(\theta_{\text{goal}} - \theta)
+$$
+
+Then:
+
+$$
+r_\theta = 10 \cdot \cos(\delta)
+$$
+
+> ✅ **Note:** The `wrap` function ensures the angle \( \delta \) is within \( [-\pi, \pi] \) for proper angular difference handling.
+
+---
+
+### 🧠 Summary
+
+The reward encourages the agent to:
+
+- Minimize distance to the target.
+- Align its heading with the direction toward the target.
+
 
 ## ⚙️ Requirements
 
