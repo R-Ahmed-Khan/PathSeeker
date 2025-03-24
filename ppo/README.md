@@ -206,6 +206,21 @@ truncation = (
 
 ## 📜 PPO Algorithm
 
+## Hyperparameters
+
+### Learning Parameters
+
+We have used the following learning parameters:
+
+- Rnning Device: CPU
+- Time steps: 0.3
+- Memory length: 0.05
+- Batch size: 0.95
+- No. of epochs: 400000
+- Learning rate ($\alpha$)
+- Policy clip parameter ($\epsilon$)
+- Discount factor ($\gamma$)
+- GAE lambda ($\lambda$)
 
 ## 💻 Installation
 
