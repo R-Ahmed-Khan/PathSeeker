@@ -171,24 +171,28 @@ Where:
 
 This condition ensures that the episode ends when the target is reached.
 
-⏹️ Truncation Condition
+## ⏹️ Truncation Condition
 
 The episode is **truncated (forcefully stopped)** if any of the following occur:
 
 - The agent exceeds the allowed episode length:
-  
-  $$\text{step_count} &gt; \text{episode_length}$$
+
+  $$
+  \text{step\_count} > \text{episode\_length}
+  $$
 
 - The agent moves **out of the environment bounds**:
-  
+
   $$
-  \
-  x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}} \\
-  y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
-  \
+  x < x_{\text{min}} \quad \text{or} \quad x > x_{\text{max}}
   $$
 
-These checks prevent the agent from running indefinitely or moving outside the valid operational area.
+  $$
+  y < y_{\text{min}} \quad \text{or} \quad y > y_{\text{max}}
+  $$
+
+These checks prevent the agent from running indefinitely or exiting the valid operating area.
+
 
 ### 🧠 Implementation Logic
 
