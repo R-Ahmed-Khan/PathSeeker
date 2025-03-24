@@ -49,7 +49,7 @@ The **neural network (policy)** outputs actions in the normalized range:
 self.action_space = spaces.Box(low=np.array([-1, 0]), high=np.array([1, 1]), dtype=np.float32)
 ```
 
-## 📐 Control Bounds
+### 📐 Control Bounds
 
 These normalized outputs from the policy network are scaled to the actual control limits before being applied in the environment.
 
@@ -61,9 +61,9 @@ self.steer_max = np.deg2rad(25)
 self.steer_min = np.deg2rad(-25) 
 ```
 
-## 🔄 Action Scaling
+### 🔄 Action Scaling
 
-### 🧮 Scaling Equations
+#### 🧮 Scaling Equations
 
 Let the normalized action from the policy be:
 
@@ -90,7 +90,7 @@ $$
 
 To convert normalized actions to their real-world equivalents, the following function is used:
 
-### ✅ Python Implementation
+#### ✅ Python Implementation
 
 ```python
 def scale_action(self, action):
