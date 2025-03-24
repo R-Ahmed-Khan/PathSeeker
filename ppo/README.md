@@ -214,11 +214,11 @@ truncation = (
 
 We have used the following learning parameters:
 
-- Rnning Device: CPU
-- Time steps: 1500000
-- Memory length: 600
-- Batch size: 200
-- No. of epochs: 10
+- Rnning Device (dvc): CPU
+- Time steps (time_steps): 1500000
+- Memory length (memory): 600
+- Batch size (batch_size): 200
+- No. of epochs (epochs): 10
 - Learning rate ($\alpha$): 0.0001
 - Policy clip parameter ($\epsilon$): 0.2
 - Discount factor ($\gamma$): 0.99
@@ -307,15 +307,39 @@ for batch in batches:
 
 ## 💻 Installation
 
-### ⚙️ Requirement 
+### ⚙️ Steps for Setup:
 
 This repository was made on python 3.12.4 64-bit.
 
-Install dependencies:
+1. Clone the Repository:
+   ```bash
+   git clone https://github.com/R-Ahmed-Khan/PathSeeker.git
+   ```
 
+2. Requirements:
+   ```bash
+   cd PathSeeker/ppo/
+   pip install -r requirements.txt
+   ```
+
+### 🧪 Training and Testing Policy
+
+1. To train the policy, run
+   ```bash
+   python3 learn_ppo.py
+   ```
+
+2. To test the policy, run
+   ```bash
+   python3 test_ppo.py
+   ```
+
+If you want to change any hyperparameter for training other than the default values, run
 ```bash
-pip install -r requirements.txt
+python3 learn_ppo.py --<hyperparameter> <value>
 ```
+
+The hyperparameters are `dvc`, `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the hyperparameters in `run/learn_ppo.py` lines 13 - 21.
 
 ## 📈 Experimental Results
 
