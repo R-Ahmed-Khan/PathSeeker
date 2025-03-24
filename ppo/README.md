@@ -177,9 +177,7 @@ The episode is **truncated (forcefully stopped)** if any of the following occur:
 
 - The agent exceeds the allowed episode length:
   
-  $
-  \text{step_count} > \text{episode_length}
-  $
+  $\text{step_count} > \text{episode_length}$
 
 - The agent moves **out of the environment bounds**:
   
