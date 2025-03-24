@@ -77,6 +77,7 @@ Let the normalized action from the policy be:
 Then the scaled real-world values are computed as:
 
 - Steering Angle ( $\delta \$)
+  
 $$
 \
 \delta = \delta_{\text{min}} + \frac{(a_0 + 1)}{2} \cdot (\delta_{\text{max}} - \delta_{\text{min}})
@@ -84,6 +85,7 @@ $$
 $$
 
 - Velocity
+  
 $$
 \
 v = v_{\text{min}} + \frac{(a_1 + 1)}{2} \cdot (v_{\text{max}} - v_{\text{min}})
