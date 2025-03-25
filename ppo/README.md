@@ -448,7 +448,10 @@ This repository was made on python 3.12.4 64-bit.
 
 ### Policy Loss
   
-![actor_loss_curve](https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7" alt="actor_loss_curve" width="60%">
+</p>
+
   
 ### Critic Loss
 
@@ -457,11 +460,17 @@ This repository was made on python 3.12.4 64-bit.
 
 ### Static Target
   
-![simulation](https://github.com/user-attachments/assets/5827f87c-7636-4600-886a-ea6e3186e502)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5827f87c-7636-4600-886a-ea6e3186e502" alt="simulation" width="60%">
+</p>
+
 
 ### Moving Target
 
-![simulation](https://github.com/user-attachments/assets/c412f1f3-393d-4f14-a9a8-aeaec9d2ce44)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c412f1f3-393d-4f14-a9a8-aeaec9d2ce44" alt="simulation" width="60%">
+</p>
+
 
 ## ChatGPT Prompts
 
