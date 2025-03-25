@@ -288,9 +288,9 @@ We have used the following learning parameters:
 📈 Compute GAE (Generalized Advantage Estimation)
 
 $$
-\
-\hat{A}_t = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
-\
+
+\hat{A} = \delta_t + (\gamma \lambda) \delt_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
+
 $$
 
 $$
