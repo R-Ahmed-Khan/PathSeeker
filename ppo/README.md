@@ -450,6 +450,7 @@ This repository was made on python 3.12.4 64-bit.
 ### Policy Loss
 
 <div align="center">
+  
 ![actor_loss_curve](https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7)
 
 <div>
@@ -479,13 +480,15 @@ This repository was made on python 3.12.4 64-bit.
 
 ## ChatGPT Prompts
 
-
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/64ef2b97-5f40-47bb-916d-d72871db5c2d" alt="Image 1" width="45%"/>
   <img src="https://github.com/user-attachments/assets/63512144-8771-434b-8cdd-c28126972a21" alt="Image 2" width="45%"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/df7cc985-923a-44ec-af6c-7e66e90c26cc" alt="Image 1" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/d1c87807-601a-438c-aceb-d724347de59b" alt="Image 2" width="45%"/>
+</p>
 
 
 ## 📚 References
