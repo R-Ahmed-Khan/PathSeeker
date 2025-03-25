@@ -411,7 +411,7 @@ This repository was made on python 3.12.4 64-bit.
    ```
     
    The hyperparameters are `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the  
-   hyperparameters in `run/learn_ppo.py` lines 13 - 21.
+   hyperparameters in `run/learn_ppo.py` lines 12 - 20.
 
 2. To test the policy with static target, run
    ```bash
