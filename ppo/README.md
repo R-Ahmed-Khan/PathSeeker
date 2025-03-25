@@ -381,6 +381,22 @@ weighted_clipped_probs = T.clamp(prob_ratio, 1 - self.policy_clip,
                                  1 + self.policy_clip) * advantage[batch]
 ```
 
+The actor and critic policies are optimized as shown below.
+```python
+actor_loss = -T.min(weighted_probs, weighted_clipped_probs).mean()
+# ---critic loss
+returns = advantage[batch] + values[batch]
+critic_loss = (returns - critic_value) ** 2
+critic_loss = critic_loss.mean()
+
+total_loss = actor_loss + 0.5 * critic_loss
+self.actor.optimizer.zero_grad()
+self.critic.optimizer.zero_grad()
+total_loss.backward()
+self.actor.optimizer.step()
+self.critic.optimizer.step()
+```
+
 ## 💻 Installation
 
 ### ⚙️ Steps for Setup:
