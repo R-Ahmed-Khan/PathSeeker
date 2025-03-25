@@ -493,7 +493,7 @@ Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017).
 
 ## 📂 Project Structure
 
-PathSeeker/ppo/ 
+    PathSeeker/ppo/ 
 
         ├── analysis/ 
 
