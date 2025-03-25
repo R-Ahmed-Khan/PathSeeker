@@ -12,6 +12,27 @@ This project implements an autonomous path palnning system for an Unmanned Groun
 
 The task is framed as a reinforcement learning problem where the agent (UGV) must learn an optimal policy to reach the target. The state and action spaces are continuous, and the agent receives rewards based on its distance to the target and its alignment with the target.
 
+### Ackermann Kinematic Model
+
+$$
+\
+x_{t+1} = x_t + v \cdot \cos(\theta_t) \cdot \Delta t
+\
+$$
+
+$$
+\
+y_{t+1} = y_t + v \cdot \sin(\theta_t) \cdot \Delta t
+\
+$$
+
+$$
+\
+\theta_{t+1} = \theta_t + \frac{v}{L} \cdot \tan(\text{steer\_angle}) \cdot \Delta t
+\
+$$
+
+
 ## 📌 Problem Setup
 
 - **Agent**: UGV (Ackermann kinematic model)
@@ -397,6 +418,14 @@ This repository was made on python 3.12.4 64-bit.
    python3 run/learn_ppo.py
    ```
 
+   If you want to change any hyperparameter for training other than the default values, run
+   ```bash
+   python3 run/learn_ppo.py --<hyperparameter> <value>
+   ```
+    
+   The hyperparameters are `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the  
+   hyperparameters in `run/learn_ppo.py` lines 13 - 21.
+
 2. To test the policy with static target, run
    ```bash
    python3 run/test_ppo.py --no_moving_target
@@ -406,13 +435,6 @@ This repository was made on python 3.12.4 64-bit.
    ```bash
    python3 run/test_ppo.py --moving_target
    ```
-
-If you want to change any hyperparameter for training other than the default values, run
-```bash
-python3 run/learn_ppo.py --<hyperparameter> <value>
-```
-
-The hyperparameters are `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the hyperparameters in `run/learn_ppo.py` lines 13 - 21.
 
 ## 📈 Experimental Results
 
