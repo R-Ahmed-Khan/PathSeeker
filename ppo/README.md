@@ -287,15 +287,31 @@ We have used the following learning parameters:
 
 📈 Compute GAE (Generalized Advantage Estimation)
 
+From [1]:
+
+$$
+\
+\quad \delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+\
+$$
+
 $$
 \
 \hat{A_{t}} = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
 \
 $$
 
+Our implementation:
+
 $$
 \
-\quad \delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+\
+$$
+
+$$
+\
+\hat{A}_t = \sum_{k=t}^{T-1} (\gamma \lambda)^{k-t} \delta_k
 \
 $$
 
