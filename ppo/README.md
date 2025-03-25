@@ -8,11 +8,11 @@ This project implements an autonomous path palnning system for an Unmanned Groun
   
 </div>
 
-## 🚗 Overview
+## 🗺️ Overview
 
 The task is framed as a reinforcement learning problem where the agent (UGV) must learn an optimal policy to reach the target. The state and action spaces are continuous, and the agent receives rewards based on its distance to the target and its alignment with the target.
 
-### Ackermann Kinematic Model
+### 🚗 Ackermann Kinematic Model
 
 $$
 \
@@ -444,6 +444,14 @@ This repository was made on python 3.12.4 64-bit.
 
 
 ## ChatGPT Prompts
+
+
+
+<p align="center">
+  <img src="![prompt 1a](https://github.com/user-attachments/assets/64ef2b97-5f40-47bb-916d-d72871db5c2d)" alt="Image 1" width="45%"/>
+  <img src="![prompt 1b](https://github.com/user-attachments/assets/63512144-8771-434b-8cdd-c28126972a21)" alt="Image 2" width="45%"/>
+</p>
+
 
 ## 📚 References
 
