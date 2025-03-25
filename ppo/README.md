@@ -441,7 +441,10 @@ This repository was made on python 3.12.4 64-bit.
 
 ### Learning Curve
   
-![reward_curve](https://github.com/user-attachments/assets/6bd6b937-d537-47c4-b72b-b8aef7d132eb)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6bd6b937-d537-47c4-b72b-b8aef7d132eb" alt="reward_curve" width="60%">
+</p>
+
 
 ### Policy Loss
   
@@ -485,11 +488,11 @@ PathSeeker/ppo/
 
         ├── analysis/ 
 
-           ├── 
+           ├── actor_loss_curve.png
 
-           ├── 
+           ├── critic_loss_curve.png
 
-           └──  
+           └──  simulation.gif
   
         ├── models/ 
 
