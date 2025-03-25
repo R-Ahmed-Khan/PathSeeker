@@ -10,19 +10,19 @@ This project implements an autonomous path palnning system for an Unmanned Groun
 
 ## 🚗 Overview
 
-The task is framed as a reinforcement learning problem where the agent (UGV) must learn an optimal policy to reach the target efficiently and safely. The state and action spaces are continuous, and the agent receives rewards based on its distance to the target.
+The task is framed as a reinforcement learning problem where the agent (UGV) must learn an optimal policy to reach the target. The state and action spaces are continuous, and the agent receives rewards based on its distance to the target and its alignment with the target.
 
 ## 📌 Problem Setup
 
 - **Agent**: UGV (Ackermann kinematic model)
 - **Environment**: 2D continuous space with moving target
-- **Objective**: Reach the target location from a given start point 
+- **Objective**: Reach the target location from a given start point (Target can also be moving)
 - **Algorithm**: Proximal Policy Optimization (PPO)
 
 ## 🧭 Observation Space
 
 The observation space of the system is represented by the UGV's position (X, Y), its orientation ($\theta$) and the target position ($$\ X_t \$$ , $$\ Y_t \$$).
-  - $X, Y$ : UGV Position on a 2D grid.
+  - $X, Y$ : UGV Position on a 2D space.
   - $\theta$ : UGV Orientation (heading)
   - $$\ X_t \$$ , $$\ Y_t \$$ : Target Position
 
@@ -110,7 +110,7 @@ def get_next_observation(self, observation, action):
     ...
 ```
 
-This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
+This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment. Moreover, this methodology also allows to scale the control bounds as required.
 
 ## 🏆 Reward Function
 
@@ -185,15 +185,11 @@ $$
 \lVert \mathbf{p} - \mathbf{g} \rVert < 0.2
 $$
 
-Where:
-- $\mathbf{p} = (x, y)$ is the agent's current position.
-- $\mathbf{g} = (x_t, y_t)$ is the target position.
-
 This condition ensures that the episode ends when the target is reached.
 
 2️⃣ Truncation Condition
 
-The episode is **truncated (forcefully stopped)** if any of the following occur:
+The episode is **truncated** if any of the following occur:
 
 - The agent exceeds the allowed episode length:
 
@@ -232,7 +228,6 @@ truncation = (
 
 We have used the following learning parameters:
 
-- Running Device (dvc): CPU
 - Time steps (time_steps): 1500000
 - Memory length (memory): 600
 - Batch size (batch_size): 200
@@ -257,7 +252,7 @@ We have used the following learning parameters:
 - Initialize these 3 classes:
   - Actor network $\pi_{\theta}$
   - Critic network $V_{\phi}$
-  - Memory class `PPOMemory`
+  - Memory class `PPOBase`
 
 ---
 
@@ -399,12 +394,12 @@ This repository was made on python 3.12.4 64-bit.
 
 1. To train the policy, run
    ```bash
-   python3 learn_ppo.py
+   python3 run/learn_ppo.py
    ```
 
 2. To test the policy, run
    ```bash
-   python3 test_ppo.py
+   python3 run/test_ppo.py
    ```
 
 If you want to change any hyperparameter for training other than the default values, run
@@ -412,7 +407,7 @@ If you want to change any hyperparameter for training other than the default val
 python3 learn_ppo.py --<hyperparameter> <value>
 ```
 
-The hyperparameters are `dvc`, `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the hyperparameters in `run/learn_ppo.py` lines 13 - 21.
+The hyperparameters are `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the hyperparameters in `run/learn_ppo.py` lines 13 - 21.
 
 ## 📈 Experimental Results
 
