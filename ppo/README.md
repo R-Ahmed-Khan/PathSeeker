@@ -289,7 +289,7 @@ We have used the following learning parameters:
 
 $$
 \
-\hat{A} = \delta_t + (\gamma \lambda) \delt_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
+\hat{A_{t}} = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
 \
 $$
 
