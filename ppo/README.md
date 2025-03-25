@@ -290,8 +290,11 @@ We have used the following learning parameters:
 $$
 \
 \hat{A}_t = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1},
-\]
-\[
+\
+$$
+
+$$
+\
 \text{where} \quad \delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
 \
 $$
