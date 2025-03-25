@@ -16,22 +16,23 @@ The task is framed as a reinforcement learning problem where the agent (UGV) mus
 
 $$
 \
-x_{t+1} = x_t + v \cdot \cos(\theta_t) \cdot \Delta t
+x_{t+1} = x_t + v \cdot \cos(\theta_t) \cdot \Delta t,
 \
 $$
 
 $$
 \
-y_{t+1} = y_t + v \cdot \sin(\theta_t) \cdot \Delta t
+y_{t+1} = y_t + v \cdot \sin(\theta_t) \cdot \Delta t,
 \
 $$
 
 $$
 \
-\theta_{t+1} = \theta_{t} + \frac{v}{L} \cdot \tan(\delta) \cdot \Delta t
+\theta_{t+1} = \theta_{t} + \frac{v}{L} \cdot \tan(\delta) \cdot \Delta t,
 \
 $$
 
+where x, y are UGV's position and $\theta$ is its heading, L is the distance between front and axle wheels, v is the velocity, and $\delta$ is the steering angle.
 
 ## 📌 Problem Setup
 
