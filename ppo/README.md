@@ -443,7 +443,7 @@ This repository was made on python 3.12.4 64-bit.
 
 <div align="center">
   
-![reward_curve](https://github.com/user-attachments/assets/6bd6b937-d537-47c4-b72b-b8aef7d132eb)
+  ![reward_curve](https://github.com/user-attachments/assets/6bd6b937-d537-47c4-b72b-b8aef7d132eb)
 
 <div>
   
@@ -451,7 +451,7 @@ This repository was made on python 3.12.4 64-bit.
 
 <div align="center">
   
-![actor_loss_curve](https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7)
+  ![actor_loss_curve](https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7)
 
 <div>
   
@@ -465,7 +465,7 @@ This repository was made on python 3.12.4 64-bit.
 
 <div align="center">
   
-![simulation](https://github.com/user-attachments/assets/5827f87c-7636-4600-886a-ea6e3186e502)
+  ![simulation](https://github.com/user-attachments/assets/5827f87c-7636-4600-886a-ea6e3186e502)
 
 <div>
 
