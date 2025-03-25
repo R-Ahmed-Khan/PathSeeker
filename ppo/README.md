@@ -448,9 +448,10 @@ This repository was made on python 3.12.4 64-bit.
 
 
 <p align="center">
-  <img src="![prompt 1a](https://github.com/user-attachments/assets/64ef2b97-5f40-47bb-916d-d72871db5c2d)" alt="Image 1" width="45%"/>
-  <img src="![prompt 1b](https://github.com/user-attachments/assets/63512144-8771-434b-8cdd-c28126972a21)" alt="Image 2" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/64ef2b97-5f40-47bb-916d-d72871db5c2d" alt="Image 1" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/63512144-8771-434b-8cdd-c28126972a21" alt="Image 2" width="45%"/>
 </p>
+
 
 
 ## 📚 References
