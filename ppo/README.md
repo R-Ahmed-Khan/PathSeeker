@@ -44,9 +44,9 @@ where x, y are UGV's position and $\theta$ is its heading, L is the distance bet
 ## 🧭 Observation Space
 
 The observation space of the system is represented by the UGV's position (X, Y), its orientation ($\theta$) and the target position ($$\ X_t \$$ , $$\ Y_t \$$).
-  - $X, Y$ : UGV Position on a 2D space.
+  - $x, y$ : UGV Position on a 2D space.
   - $\theta$ : UGV Orientation (heading)
-  - $$\ X_t \$$ , $$\ Y_t \$$ : Target Position
+  - $$\ x_t \$$ , $$\ y_t \$$ : Target Position
 
   ```python
 # State space bounds
