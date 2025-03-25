@@ -287,7 +287,7 @@ We have used the following learning parameters:
 
 📈 Compute GAE (Generalized Advantage Estimation)
 
-The equations are taken from  ([1](https://arxiv.org/abs/1707.06347)):
+The equations are taken from  [[1](https://arxiv.org/abs/1707.06347)]:
 
 $$
 \
@@ -334,28 +334,24 @@ L^{\text{CLIP}}(\theta) = \hat{\mathbb{E}}_t \left[ \min \left( r_t(\theta) \hat
 \
 $$
 
+where, $r_t(\theta)$ is the probability ratio:
+
+$$
+\
+r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{\text{old}}}(a_t \mid s_t)}
+\
+$$
+
 ```python
-for batch in batches:
-    # Get current policy outputs
-    dist_new = π_θ(states)
-    V_new = V_ϕ(states)
+dist = self.actor(states)
+critic_value = self.critic(states).squeeze()
 
-    # Compute new log probabilities
-    new_log_probs = dist_new.log_prob(actions)
-    ratio = exp(new_log_probs - old_log_probs)
+new_probs = dist.log_prob(actions).sum(dim=-1)
+prob_ratio = (new_probs - old_probs).exp()
 
-    # PPO clipped surrogate objective
-    surr1 = ratio * advantage
-    surr2 = clip(ratio, 1 - ε, 1 + ε) * advantage
-    actor_loss = -mean(min(surr1, surr2))
-
-    # Critic loss
-    returns = advantage + values
-    critic_loss = mean((returns - V_new)^2)
-
-    # Total loss and optimization
-    total_loss = actor_loss + 0.5 * critic_loss
-    Backpropagate and update actor & critic
+weighted_probs = advantage[batch] * prob_ratio
+weighted_clipped_probs = T.clamp(prob_ratio, 1 - self.policy_clip,
+                                 1 + self.policy_clip) * advantage[batch]
 ```
 
 ## 💻 Installation
@@ -402,7 +398,7 @@ The hyperparameters are `dvc`, `time_steps`, `memory`, `batch_size`, `epochs`, `
 ## 📚 References
 
 Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017).  
-**Proximal Policy Optimization Algorithms**. arXiv preprint [1](https://arxiv.org/abs/1707.06347).
+**Proximal Policy Optimization Algorithms**. arXiv preprint [[1](https://arxiv.org/abs/1707.06347)].
 
 
 ## 📂 Project Structure
