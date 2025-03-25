@@ -28,7 +28,7 @@ $$
 
 $$
 \
-\theta_{t+1} = \theta_{t} + \frac{v}{L} \cdot \tan(\text{\delta}) \cdot \Delta t
+\theta_{t+1} = \theta_{t} + \frac{v}{L} \cdot \tan(\delta) \cdot \Delta t
 \
 $$
 
