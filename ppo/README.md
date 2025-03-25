@@ -252,12 +252,12 @@ We have used the following learning parameters:
   - `policy_clip` ← PPO clipping threshold
   - `batch_size` ← number of transitions per mini-batch
   - `n_epochs` ← number of learning epochs
+  - `total_timesteps` ← total number of steps
 
-- Initialize:
-  - Actor network π_θ
-  - Critic network V_ϕ
-  - Optimizers for both networks
-  - Memory buffer `PPOMemory`
+- Initialize these 3 classes:
+  - Actor network $\pi_{\theta}$
+  - Critic network $V_{\phi}$
+  - Memory class `PPOMemory`
 
 ---
 
@@ -271,9 +271,33 @@ We have used the following learning parameters:
    - `a ← tanh(a_raw)`  # squash to [-1, 1]
    - `log_prob ← log_prob(a_raw) - tanh_correction`
    - `v ← V_ϕ(s)`
+     
+   ```python
+   def choose_action(self, observation):
+      state = T.tensor([observation], dtype=T.float).to(self.actor.device)
+      dist = self.actor(state)
+      value = self.critic(state)
+      raw_action = dist.sample()
+      action = T.tanh(raw_action)  # squash to [-1,1]
+      log_prob = dist.log_prob(raw_action).sum(dim=-1)  # log prob in raw space
+      log_prob -= T.log(1 - action.pow(2) + 1e-6).sum(dim=-1)  # Tanh correction
+      return action.cpu().detach().numpy()[0], log_prob.item(), value.item()
+   ```
+   
 3. Execute action `a` in the environment
 4. Observe reward `r`, next state `s'`, and done flag
-5. Store `(s, a, log_prob, v, r, done)` in memory
+
+   ```python
+   def get_next_observation(self, observation, action):
+      steer_angle, v = self.scale_action(action)
+      x, y, theta, target_x, target_y = observation
+      next_x = x + v * np.cos(theta) * self.dt
+      next_y = y + v * np.sin(theta) * self.dt
+      next_theta = self.wrap_angle(theta + (v / self.L) * np.tan(steer_angle) * self.dt)
+      return np.array([next_x, next_y, next_theta, target_x, target_y], dtype=np.float32)
+   ```
+   
+6. Store `(s, a, log_prob, v, r, done)` in memory
 
 ---
 
