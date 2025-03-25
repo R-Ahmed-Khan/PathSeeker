@@ -397,14 +397,19 @@ This repository was made on python 3.12.4 64-bit.
    python3 run/learn_ppo.py
    ```
 
-2. To test the policy, run
+2. To test the policy with static target, run
    ```bash
-   python3 run/test_ppo.py
+   python3 run/test_ppo.py --no_moving_target
+   ```
+
+3. To test the policy with moving target, run
+   ```bash
+   python3 run/test_ppo.py --moving_target
    ```
 
 If you want to change any hyperparameter for training other than the default values, run
 ```bash
-python3 learn_ppo.py --<hyperparameter> <value>
+python3 run/learn_ppo.py --<hyperparameter> <value>
 ```
 
 The hyperparameters are `time_steps`, `memory`, `batch_size`, `epochs`, `alpha`, `epsilon`, `gamma`, `gae_lamda`. You can find more details about the hyperparameters in `run/learn_ppo.py` lines 13 - 21.
