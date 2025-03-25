@@ -263,12 +263,12 @@ We have used the following learning parameters:
 
 ### 🚀 Interaction with Environment
 
-**For each time step or episode:**
+**For each time step:**
 1. Observe current state `s`
 2. Get action `a`, log probability `log_prob`, and value `v` from policy:
    - `dist ← π_θ(s)`
    - `a_raw ~ dist.sample()`
-   - `a ← tanh(a_raw)`  # squash to [-1, 1]
+   - `a ← tanh(a_raw)`
    - `log_prob ← log_prob(a_raw) - tanh_correction`
    - `v ← V_ϕ(s)`
      
