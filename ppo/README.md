@@ -311,7 +311,7 @@ $$
 
 $$
 \
-\hat{A}_t = \sum_{k=t}^{T-1} (\gamma \lambda)^{k-t} \delta_k
+\hat{A_{t}} = \sum_{k=t}^{T-1} (\gamma \lambda)^{k-t} \delta_k
 \
 $$
 
