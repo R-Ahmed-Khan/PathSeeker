@@ -19,7 +19,7 @@ The task is framed as a reinforcement learning problem where the agent (UGV) mus
 - **Objective**: Reach the target location from a given start point 
 - **Algorithm**: Proximal Policy Optimization (PPO)
 
-## 🧩 Observation Space
+## 🧭 Observation Space
 
 The observation space of the system is represented by the UGV's position (X, Y), its orientation ($\theta$) and the target position ($$\ X_t \$$ , $$\ Y_t \$$).
   - $X, Y$ : UGV Position on a 2D grid.
@@ -112,7 +112,7 @@ def get_next_observation(self, observation, action):
 
 This ensures that the policy outputs remain bounded while allowing fine control over the UGV in the continuous environment.
 
-## 🎯 Reward Function
+## 🏆 Reward Function
 
 The total reward $\( r $\) at each time step is defined as the sum of:
 
@@ -286,6 +286,16 @@ We have used the following learning parameters:
 - Create shuffled mini-batches
 
 📈 Compute GAE (Generalized Advantage Estimation)
+
+$$
+\
+\hat{A}_t = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1},
+\]
+\[
+\text{where} \quad \delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+\
+$$
+
 
 ```python
 for t in range(T - 1):
