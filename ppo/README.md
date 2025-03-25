@@ -428,19 +428,22 @@ This repository was made on python 3.12.4 64-bit.
 ### Learning Curve
   
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6bd6b937-d537-47c4-b72b-b8aef7d132eb" alt="reward_curve" width="60%">
+  <img src="analysis/rewards.png" alt="reward_curve" width="60%">
 </p>
 
 
 ### Policy Loss
   
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a7f3d043-aa9f-499d-b085-3d0d9bad34f7" alt="actor_loss_curve" width="60%">
+  <img src="analysis/actor_loss.png" alt="actor_loss_curve" width="60%">
 </p>
 
   
 ### Critic Loss
 
+<p align="center">
+  <img src="analysis/critic_loss_smoothed.png" alt="actor_loss_curve" width="60%">
+</p>
 
 ## 🌀 Simulation
 
