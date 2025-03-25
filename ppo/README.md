@@ -419,6 +419,9 @@ The hyperparameters are `dvc`, `time_steps`, `memory`, `batch_size`, `epochs`, `
 
 ## 🌀 Simulation
 
+
+## ChatGPT Prompts
+
 ## 📚 References
 
 Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017).  
