@@ -38,7 +38,7 @@ where x, y are UGV's position and $\theta$ is its heading, L is the distance bet
 
 - **Agent**: UGV (Ackermann kinematic model)
 - **Environment**: 2D continuous space with moving target
-- **Objective**: Reach the target location from a given start point (Target can also be moving)
+- **Objective**: Reach the target location from a given start point
 - **Algorithm**: Proximal Policy Optimization (PPO)
 
 ## 🧭 Observation Space
@@ -339,20 +339,6 @@ $$
 $$
 \
 \hat{A_{t}} = \delta_t + (\gamma \lambda) \delta_{t+1} + \cdots + (\gamma \lambda)^{T - t + 1} \delta_{T - 1}
-\
-$$
-
-Our implementation:
-
-$$
-\
-\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
-\
-$$
-
-$$
-\
-\hat{A_{t}} = \sum_{k=t}^{T-1} (\gamma \lambda)^{k-t} \delta_k
 \
 $$
 
