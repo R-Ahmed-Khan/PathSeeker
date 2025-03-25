@@ -287,7 +287,7 @@ We have used the following learning parameters:
 
 📈 Compute GAE (Generalized Advantage Estimation)
 
-From [1]:
+The equations are taken from  ([1](https://arxiv.org/abs/1707.06347)):
 
 $$
 \
@@ -315,18 +315,24 @@ $$
 \
 $$
 
-
 ```python
-for t in range(T - 1):
-    A[t] = 0
+for t in range(len(reward_arr) - 1):
     discount = 1
-    for k in range(t, T - 1):
-        delta = r_k + γ * V_{k+1} * (1 - done_k) - V_k
-        A[t] += discount * delta
-        discount *= γ * λ
+    a_t = 0
+    for k in range(t, len(reward_arr) - 1):
+        a_t += discount * (reward_arr[k] + self.gamma * values[k + 1] *
+                           (1 - int(dones_arr[k])) - values[k])
+        discount *= self.gamma * self.gae_lambda
+    advantage[t] = a_t
 ```
 
 ### 🔁 PPO Update Loop
+
+$$
+\
+L^{\text{CLIP}}(\theta) = \hat{\mathbb{E}}_t \left[ \min \left( r_t(\theta) \hat{A}_t, \; \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) \right]
+\
+$$
 
 ```python
 for batch in batches:
@@ -392,6 +398,11 @@ The hyperparameters are `dvc`, `time_steps`, `memory`, `batch_size`, `epochs`, `
 
 
 ## 🌀 Simulation
+
+## 📚 References
+
+Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017).  
+**Proximal Policy Optimization Algorithms**. arXiv preprint [1](https://arxiv.org/abs/1707.06347).
 
 
 ## 📂 Project Structure
